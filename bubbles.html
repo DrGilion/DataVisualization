@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+ | Simple D3 example showing a bubble chart of traffic data.
+ | Volker Ahlers, Hochschule Hannover, 2012.
+ |
+ | Code based on chapters 2 and 3 of
+ |   Dewar, M.: Getting Started with D3. O'Reilly, Sebastopol, CA, 2012.
+ | Data source (book webpage):
+ |   http://examples.oreilly.com/0636920025429/
+  -->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>D3 Bubbles</title>
+  <script type="text/javascript" src="d3.min.js"></script>
+  <style type="text/css">
+    .bubble {
+      color: #3D6999;
+      fill: #3D6999;
+    }    
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    // Option 1: load data from JSON file and call draw() function
+    d3.json("data/plaza_traffic.json", draw);
+
+    /*
+    // Option 2: define data via object initializers
+    var data = {
+        cash: [
+          {
+            count: 26774.09756097561, 
+            name: "Robert F. Kennedy Bridge Bronx Plaza"
+          }, 
+          {
+            count: 18612.77618364419, 
+            name: "Robert F. Kennedy Bridge Manhattan Plaza"
+          }, 
+          {
+            count: 31343.0631276901, 
+            name: "Bronx-Whitestone Bridge"
+          }
+        ],
+        electronic: [
+          // ...
+        ]
+      };
+      
+    draw(data);
+    */    
+
+    /*
+    // Option 3: define data via object constructors
+    
+    // Traffic constructor
+    //   cash: Plaza array
+    //   electronic: Plaza array
+    function Traffic(cash, electronic) {
+      this.cash = cash;
+      this.electronic = electronic;
+    }
+    
+    // Plaza constructor
+    //   name: string
+    //   count: float
+    function Plaza(name, count) {
+      this.name = name;
+      this.count = count;
+    }
+    
+    var cash = [
+        new Plaza("Robert F. Kennedy Bridge Bronx Plaza", 26774.09756097561),
+        new Plaza("Robert F. Kennedy Bridge Manhattan Plaza", 18612.77618364419),
+        new Plaza("Bronx-Whitestone Bridge", 31343.0631276901) 
+      ];
+    var electronic = [
+        //...
+      ];
+    var data = new Traffic(cash, electronic);
+    
+    draw(data);
+    */
+    
+    function draw(data) {
+      "use strict";
+      console.log("data:", data);
+      
+      // compute SVG parameters from data range
+      var width = document.body.clientWidth;
+      var indexMax = data.cash.length - 1;
+      var countMax = d3.max(data.cash, function(d) { return d.count; });
+      var radiusMax = Math.ceil(width / (2 * data.cash.length));
+      var height = 2 * radiusMax;
+      console.log("width, height:", width, height);
+      console.log("maximum index, count, radius:", indexMax, countMax, radiusMax);
+      
+      // define scale functions for center point (x,y) and radius r
+      var xScale = d3.scale.linear()
+                     .range([radiusMax, width - radiusMax])
+                     .domain([0, indexMax]);
+      var yScale = d3.scale.linear()
+                     .range([height / 2, height / 2])
+                     .domain([0, indexMax]);
+      var rScale = d3.scale.sqrt()
+                     .range([0, radiusMax])
+                     .domain([0, countMax]);
+      
+      // draw visualization
+      d3.select("body")
+        .append("svg")
+          .attr("width", width)
+          .attr("height", height)
+        .selectAll("circle")
+          .data(data.cash)
+          .enter()
+            .append("circle")
+              .attr("class", "bubble")
+              .attr("cx", function(d, i) { return xScale(i); })
+              .attr("cy", function(d, i) { return yScale(i); })
+              .attr("r", function(d) { return rScale(d.count); })
+              .append("svg:title")
+                .text(function(d) { return "name: " + d.name + "\n"
+                    + "count: " + Math.round(d.count); });
+      
+      // define event callback functions
+      d3.selectAll("circle")
+        .on("click", changeColor)
+//        .on("click", changeCount);
+      
+      // interactively change color of selected item
+      function changeColor() {
+        var data = d3.select(this).data()[0];
+        var color = d3.select(this).style("color");
+        var newColor = prompt("Name: " + data.name + "\n\n" + "Enter color: ", color);
+        if (newColor != null) {
+          d3.select(this)
+            .transition()
+              .duration(1000)
+              .style("color", newColor)
+              .style("fill", newColor);
+        }
+      }    
+      
+      // interactively change count data of selected item
+      function changeCount() {
+        var data = d3.select(this).data()[0];
+        var newCount = prompt("Name: " + data.name + "\n\n" + "Enter count: ", data.count);
+        if (newCount != null) {
+          data.count = newCount;
+          d3.select(this)
+            .data(data);
+          d3.select(this)
+            .transition()
+              .duration(1000)
+              .attr("r", rScale(data.count))
+          d3.select(this)
+            .select("title")
+              .text("name: " + data.name + "\n" + "count: " + Math.round(data.count));
+        }
+      }            
+    }   
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+ | Simple D3 example showing a bubble chart of traffic data.
+ | Volker Ahlers, Hochschule Hannover, 2012.
+ |
+ | Code based on chapters 2 and 3 of
+ |   Dewar, M.: Getting Started with D3. O'Reilly, Sebastopol, CA, 2012.
+ | Data source (book webpage):
+ |   http://examples.oreilly.com/0636920025429/
+  -->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>D3 Bubbles</title>
+  <script type="text/javascript" src="d3.min.js"></script>
+  <style type="text/css">
+    .bubble {
+      color: #3D6999;
+      fill: #3D6999;
+    }    
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    // load data from JSON file and call draw() function
+    d3.json("data/plaza_traffic.json", draw);
+    
+    function draw(data) {
+      "use strict";
+      console.log("data:", data);
+      
+      // set SVG parameters
+      var width = 1000, height = 100;
+      
+      // define scale functions for center x and radius r
+      var xScale = d3.scale.linear()
+                     .range([50, 950])
+                     .domain([0, 9]);
+      var rScale = d3.scale.sqrt()
+                     .range([0, 50])
+                     .domain([0, 32000]);
+      
+      // draw visualization
+      d3.select("body")
+        .append("svg")
+          .attr("width", width)
+          .attr("height", height)
+        .selectAll("circle")
+          .data(data.cash)
+          .enter()
+            .append("circle")
+              .attr("class", "bubble")
+              .attr("cx", function(d, i) { return xScale(i); })
+              .attr("cy", 50)
+              .attr("r", function(d) { return rScale(d.count); })
+              .append("svg:title")
+                .text(function(d) { return "name: " + d.name + "\n"
+                    + "count: " + Math.round(d.count); });
+      
+      // define event callback function to change color
+      d3.selectAll("circle")
+        .on("click", function() {
+          var data = d3.select(this).data()[0];
+          var color = d3.select(this).style("color");
+          var newColor = prompt("Name: " + data.name + "\n\n"
+              + "Enter color: ", color);
+          if (newColor != null) {
+            d3.select(this)
+              .transition()
+                .duration(1000)   // milliseconds
+                .style("color", newColor)
+                .style("fill", newColor);
+          }
+        });
+    }
+  </script>
+</body>
+</html>
