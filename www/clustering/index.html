@@ -1,46 +1,81 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/jvascript" src="https://www.google.com/jsapi?ext.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/anomal/RainbowVis-JS/master/rainbowvis.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Age', 'Weight'],
-          [ 8,      12],
-          [ 4,      5.5],
-          [ 11,     14],
-          [ 4,      5],
-          [ 3,      3.5],
-          [ 6.5,    7]
-        ]);
-
-        var rainbow = new Rainbow(); 
-        rainbow.setNumberRange(1, data.getNumberOfRows());
-        rainbow.setSpectrum('green', 'red');
-
-        //alter the DataTable
-        for (var i=0;i<data.getNumberOfRows();i++) {
-            data.setCell(i, 2, 'point { size:14; fill-color:'+rainbow.colorAt(i+1)+'}');
-        }
-
-        var options = {
-          title: 'Age vs. Weight comparison',
-          hAxis: {title: 'Age', minValue: 0, maxValue: 15},
-          vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
-          legend: 'none'
-        };
-
-        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-
-        chart.draw(data, options);
+    <style>
+      #cluster-slider, #slider-label {
+        width: 900px;
+        margin-left: 20px;
       }
+    </style>
+    <script>
+        $( function() {
+              function loadChart(clusterCount){
+                  google.charts.load('current', {'packages':['corechart']});
+                  google.charts.setOnLoadCallback(drawChart);
+
+                  //TODO calculate clusters
+
+                  function drawChart() {
+                      var data = google.visualization.arrayToDataTable([
+                        ['Age', 'Weight'],
+                        [ 8,      12],
+                        [ 4,      5.5],
+                        [ 11,     14],
+                        [ 4,      5],
+                        [ 3,      3.5],
+                        [ 6.5,    7]
+                      ]);
+
+                      var options = {
+                          title: 'Clustering',
+                          hAxis: {title: 'Age', minValue: 0, maxValue: 15},
+                          vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
+                          legend: 'none'
+                      };
+
+                      var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+
+                      chart.draw(data, options);
+                  }
+              }
+            
+            loadChart(1);
+
+            $( "#cluster-slider" ).slider({
+              range: "min",
+              value: 1,
+              min: 1,
+              max: 5,
+              slide: function( event, ui ) {
+                $( "#amount" ).val( ui.value );
+                loadChart(ui.value);
+              }
+            });
+            $( "#amount" ).val( $( "#cluster-slider" ).slider( "value" ) );
+          } );
+    </script>
+    
+    <script type="text/javascript">
+      
+
+      
     </script>
   </head>
   <body>
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    <p id="slider-label">
+        <label for="amount">Number of clusters:</label>
+        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    </p>
+    <div id="cluster-slider"></div>
+    
   </body>
 </html>
