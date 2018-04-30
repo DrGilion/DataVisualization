@@ -11,6 +11,17 @@
 		  width: 100%;
 		  height: calc(100% - 56px - 16px);
 		}
+		table, tbody {
+			width:100%;
+			height:100%;
+			padding:0;
+			margin:0;
+			vertical-align:top
+		}
+		td  {
+			padding:0;
+			margin:0;
+		}
 	</style>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,7 +31,7 @@
 		// Load Tradedata
 		var tdata;
 		$( document ).ready(function() {
-			$.getJSON( "/data.json", function( data ) {
+			$.getJSON( "data.json", function( data ) {
 				tdata = data;
 				$( document ).trigger( "tdata_loaded");
 			});
@@ -58,7 +69,7 @@
 		}
 		
 		$( document ).on("tdata_loaded", function() {
-			// init autocomplete textfield
+			// init autocomplete texlinesSettingstfield
 			var options = {
 				data: getCountries(),
 				getValue: "name",
@@ -95,10 +106,12 @@
 		function makeChart(baseCountry, exportCountries) {
 			var chartOptions = {
 								  "type": "map",
-								  "theme": "dark",
+								  "theme": "light",
+								  "projection": "miller",
 								  "dataProvider": {
 									"map": "worldLow",
 									"zoomLevel": 1,
+									"getAreasFromMap": true,
 									"zoomLongitude": -20.1341,
 									"zoomLatitude": 49.1712,
 
@@ -119,7 +132,7 @@
 
 								  "linesSettings": {
 									"arc": -0.7, // this makes lines curved. Use value from -1 to 1
-									"arrow": "middle",
+									"arrow": "none",
 									"color": "#CC0000",
 									"alpha": 0.4,
 									"arrowAlpha": 1,
@@ -135,24 +148,41 @@
 								  "linesAboveImages": true,
 								  
 								  "export": {
-									"enabled": true
+									"enabled": false
 								  }
 								};
 								
 			if (typeof baseCountry !== 'undefined' && typeof exportCountries !== 'undefined') {
+				var max_percent = 0;
 				$.each(exportCountries, function(i, ec){
-					var thickness = 30*(ec["AmountPercentage"]/100);
-						thickness = Math.max(0.1, thickness);
+					max_percent = Math.max(max_percent, ec["AmountPercentage"]);
+				});
+				
+				$.each(exportCountries, function(i, ec){
+					var thickness = 10*(ec["AmountPercentage"]/max_percent);
+						thickness = Math.max(0.5, thickness);
 					
 					chartOptions["dataProvider"]["lines"].push({
 					  "latitudes": [ baseCountry["Latitude"], ec["Latitude"] ],
 					  "longitudes": [ baseCountry["Longitude"], ec["Longitude"] ],
 					  "thickness":thickness,
 					  "alpha":1,
-					  "arrow": "end",
 					  "balloonText": "<span><b>[[title]]</b></span><br><span>[[description]]</span>",
 					  "title": ec["Name"],
-					  "description": "Exportvolumen: "+ec["AmountPercentage"]+"%<br>Entspricht $"+ec["ExportAmount"]+"*100k"
+					  "description": "Exportvolumen: "+ec["AmountPercentage"]+"%<br>Entspricht $"+ec["ExportAmount"]+"k"
+					});
+					
+					
+					var mod = 0.25;
+					chartOptions["dataProvider"]["lines"].push({
+					  "latitudes": [ baseCountry["Latitude"], ec["Latitude"]+mod ],
+					  "longitudes": [ baseCountry["Longitude"], ec["Longitude"]+mod ],
+					  "thickness":thickness,
+					  "alpha":1,
+					  "color":"#6bf442",
+					  "balloonText": "<span><b>[[title]]</b></span><br><span>[[description]]</span>",
+					  "title": ec["Name"],
+					  "description": "Exportvolumen: "+ec["AmountPercentage"]+"%<br>Entspricht $"+ec["ExportAmount"]+"k"
 					});
 				});
 			}
@@ -163,14 +193,32 @@
 		makeChart();
 	</script>
 	
-	
-	<div class="c_select">
-		Select Country: <input type="text" name="c_selector" id="c_selector" />
-	</div>
+
+	<table>
+		<tr>
+			<td>
+				<div class="c_select">
+					Select Country: <input type="text" name="c_selector" id="c_selector" />
+				</div>
+			</td>
+		</tr>
+		<tr height="100%">
+			<td>
+				<table>
+					<tr>
+						<td width="100%"><div id="chartdiv"></div></td>
+						<td>
+							<div>
+							
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
 
 
-	<div id="chartdiv"></div>
 	
 </body>
 </html>
-
