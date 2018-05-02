@@ -40,13 +40,27 @@
                   let header = [];
                   header[0] = 'X';
                   for(let i = 1; i<= clusterCount; ++i){
-                      header[i] = "" + i;
+                      header[i] = '' + i;
                   }
                   d[0] = header;
+                  
                   clusters.forEach( (element,index) => {
-                    console.log(clusters[index]);
-                  });
+                    let elements = clusters[index];
+                    elements.forEach( dat => {
+                      let tmp = [];
+                      tmp[0] = dat[0];
+                      for(let i = 1; i <= clusterCount; ++i){
+                        if(index == i){
+                          tmp[i] = dat[1];
+                        }else{
+                          tmp[i] = null;
+                        }
+                      }
 
+                      d.push(tmp);
+
+                    })
+                  });
                   console.log(d);
 
                   
