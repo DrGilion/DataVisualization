@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="clusterfck.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <style>
       #cluster-slider, #slider-label {
@@ -21,27 +22,53 @@
                   google.charts.load('current', {'packages':['corechart']});
                   google.charts.setOnLoadCallback(drawChart);
 
-                  //TODO calculate clusters
-
-                  function drawChart() {
-                      var data = google.visualization.arrayToDataTable([
-                        ['Age', 'Weight'],
+                  let rawData = [
                         [ 8,      12],
                         [ 4,      5.5],
                         [ 11,     14],
                         [ 4,      5],
                         [ 3,      3.5],
                         [ 6.5,    7]
-                      ]);
+                      ];
+                  //TODO calculate clusters
+                  let clusters = clusterfck.kmeans(rawData, clusterCount);
 
-                      var options = {
+                  console.log(clusters);
+
+                  var d = [];
+
+                  let header = [];
+                  header[0] = 'X';
+                  for(let i = 1; i<= clusterCount; ++i){
+                      header[i] = "" + i;
+                  }
+                  d[0] = header;
+                  clusters.forEach( (element,index) => {
+                    console.log(clusters[index]);
+                  });
+
+                  console.log(d);
+
+                  
+
+                  function drawChart() {
+                      var data = google.visualization.arrayToDataTable( d );
+
+                      let options = {
                           title: 'Clustering',
                           hAxis: {title: 'Age', minValue: 0, maxValue: 15},
                           vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
-                          legend: 'none'
+                          series: {
+                              0: { pointShape: 'circle' },
+                              1: { pointShape: 'triangle' },
+                              2: { pointShape: 'square' },
+                              3: { pointShape: 'diamond' },
+                              4: { pointShape: 'star' },
+                              5: { pointShape: 'polygon' }
+                          }
                       };
 
-                      var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+                      let chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
 
                       chart.draw(data, options);
                   }
