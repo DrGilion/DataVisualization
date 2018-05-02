@@ -1,122 +1,146 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="clusterfck.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <style>
-      #cluster-slider, #slider-label {
-        width: 900px;
-        margin-left: 20px;
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="clusterfck.js"></script>
+  <style>
+    #cluster-slider,
+    #slider-label {
+      width: 1000px;
+      margin-left: 20px;
+    }
+  </style>
+  <script>
+    function clamp(num, min, max) {
+      return num <= min ? min : num >= max ? max : num;
+    }
+  </script>
+  <script>
+    var rawData = [ [500,500] ];
+    $(function () {
+
+      function loadChart(clusterCount) {
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        let clusters = clusterfck.kmeans(rawData, clusterCount);
+
+        let d = [];
+
+        let header = [];
+        header[0] = 'X';
+        for (let i = 1; i <= clusterCount; ++i) {
+          header[i] = 'Cluster ' + i;
+        }
+        d[0] = header;
+
+        clusters.forEach((element, index) => {
+          let elements = clusters[index];
+          elements.forEach(dat => {
+            let tmp = [];
+            tmp[0] = dat[0];
+            for (let i = 1; i <= clusterCount; ++i) {
+              if (index + 1 == i) {
+                tmp[i] = dat[1];
+              } else {
+                tmp[i] = null;
+              }
+            }
+
+            d.push(tmp);
+
+          })
+        });
+
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable(d);
+
+          let options = {
+            title: 'Clustering',
+            hAxis: { minValue: 0, maxValue: 1000 },
+            vAxis: { direction : -1, minValue: 0, maxValue: 1000 },
+            series: {
+              0: { pointShape: 'circle' },
+              1: { pointShape: 'triangle' },
+              2: { pointShape: 'square' },
+              3: { pointShape: 'diamond' },
+              4: { pointShape: 'star' },
+              5: { pointShape: 'polygon' }
+            }
+          };
+
+          let chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+
+          chart.draw(data, options);
+        }
       }
-    </style>
-    <script>
-        $( function() {
-              function loadChart(clusterCount){
-                  google.charts.load('current', {'packages':['corechart']});
-                  google.charts.setOnLoadCallback(drawChart);
 
-                  let rawData = [
-                        [ 8,      12],
-                        [ 4,      5.5],
-                        [ 11,     14],
-                        [ 4,      5],
-                        [ 3,      3.5],
-                        [ 6.5,    7]
-                      ];
-                  //TODO calculate clusters
-                  let clusters = clusterfck.kmeans(rawData, clusterCount);
+      loadChart(1);
 
-                  console.log(clusters);
+      $("#cluster-slider").slider({
+        range: "min",
+        value: 1,
+        min: 1,
+        max: 5,
+        slide: function (event, ui) {
+          $("#amount").val(ui.value);
+          loadChart(ui.value);
+        }
+      });
+      $("#amount").val($("#cluster-slider").slider("value"));
+      $("#chart_div").click(function (event) {
+        let result = [event.pageX,event.pageY];
+        let drawArea = [];
+        let startPoint = [];
 
-                  var d = [];
-
-                  let header = [];
-                  header[0] = 'X';
-                  for(let i = 1; i<= clusterCount; ++i){
-                      header[i] = '' + i;
-                  }
-                  d[0] = header;
-                  
-                  clusters.forEach( (element,index) => {
-                    let elements = clusters[index];
-                    elements.forEach( dat => {
-                      let tmp = [];
-                      tmp[0] = dat[0];
-                      for(let i = 1; i <= clusterCount; ++i){
-                        if(index == i){
-                          tmp[i] = dat[1];
-                        }else{
-                          tmp[i] = null;
-                        }
-                      }
-
-                      d.push(tmp);
-
-                    })
-                  });
-                  console.log(d);
-
-                  
-
-                  function drawChart() {
-                      var data = google.visualization.arrayToDataTable( d );
-
-                      let options = {
-                          title: 'Clustering',
-                          hAxis: {title: 'Age', minValue: 0, maxValue: 15},
-                          vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
-                          series: {
-                              0: { pointShape: 'circle' },
-                              1: { pointShape: 'triangle' },
-                              2: { pointShape: 'square' },
-                              3: { pointShape: 'diamond' },
-                              4: { pointShape: 'star' },
-                              5: { pointShape: 'polygon' }
-                          }
-                      };
-
-                      let chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-
-                      chart.draw(data, options);
-                  }
+        //find measurements
+        let nodes = Array.from(document.getElementsByTagName("svg")[0].childNodes);
+        for (let i = 0; i < nodes.length; i++) {
+          let item = nodes[i];
+          if(item.tagName == "g"){
+            if(item.hasChildNodes){
+              let p = item.getElementsByTagName("rect")[0];
+              if(p.getAttribute("height") == p.getAttribute("width")){
+                  drawArea = [p.getAttribute("width"),p.getAttribute("height")];
+                  startPoint = [p.getAttribute("x"),p.getAttribute("y")];
+                  break;
               }
-            
-            loadChart(1);
+            }
+          }
+        }
 
-            $( "#cluster-slider" ).slider({
-              range: "min",
-              value: 1,
-              min: 1,
-              max: 5,
-              slide: function( event, ui ) {
-                $( "#amount" ).val( ui.value );
-                loadChart(ui.value);
-              }
-            });
-            $( "#amount" ).val( $( "#cluster-slider" ).slider( "value" ) );
-          } );
-    </script>
-    
-    <script type="text/javascript">
-      
+        let ratio = 1000 / drawArea[0];
+        let realX = (result[0]-startPoint[0]) * ratio;
+        let realY = (result[1]-startPoint[1]-50) * ratio;
+        rawData.push([clamp(realX,0,1000),clamp(realY,0,1000)]);
 
-      
-    </script>
-  </head>
-  <body>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-    <p id="slider-label">
-        <label for="amount">Number of clusters:</label>
-        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-    </p>
-    <div id="cluster-slider"></div>
-    
-  </body>
+        loadChart( $("#amount").val() );
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <p id="slider-label">
+    <label for="amount">Number of clusters:</label>
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  </p>
+  <div id="cluster-slider"></div>
+  <div id="chart_div" style="width: 1000px; height: 1000px;"></div>
+
+</body>
+
 </html>
