@@ -16,7 +16,7 @@ def get_ei_data(cc, indicator, partner_cc="all"):
     if response.status != 200:
         raise Exception("Invalid Status Code: %s (cc: %s)" % (response.status, cc))
 
-    data = json.loads(response.content)
+    data = json.loads(response.text)
     return data
 
 def get_partner_data(base_cc, partner_cc, indicator="XPRT-TRD-VL"):
@@ -29,7 +29,7 @@ def get_partner_data(base_cc, partner_cc, indicator="XPRT-TRD-VL"):
     if response.status != 200:
         raise Exception("Invalid Status Code: base_country=%s, partner_country=%s" % (base_cc, partner_cc))
 
-    data = json.loads(response.content)
+    data = json.loads(response.text)
     return data
 
 def get_export_data(cc):
@@ -157,7 +157,7 @@ def main():
 
 #d = get_world_exports_by_categories("usa")
 #parsed = extract_cats_years(d)
-print get_cc_aggregates_data("usa")
+print(get_cc_aggregates_data("usa"))
 
 #d = get_import_data("USA")
 #print extract_cc_set(d)
