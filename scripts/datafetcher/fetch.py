@@ -1,4 +1,4 @@
-import json, logging
+import json, logging, sys, console, urllib, time
 from ext import urlfetch
 
 def cc_list():
@@ -6,17 +6,54 @@ def cc_list():
 	    content = f.readlines()
     return [c.split(' ')[0] for c in content]
 
+def cc_dict():
+    with open('cc.txt') as f:
+	    content = f.read().splitlines()
+    ccl = [c.split(' ', 1) for c in content]
+    ccd = {}
+    for cc in ccl:
+        ccd[cc[0]] = cc[1].strip()
+    return ccd
+
+def set_json_file(name, data):
+    file = 'data/%s.json' % name
+    with open(file, 'w') as f:
+        f.write(json.dumps(data))
+
+
+def get_retry(url, retries=3):
+    for i in range(0, retries):
+        try:
+            return urlfetch.get(url)
+        except:
+            time.sleep(1)
+    raise Exception("Could not perform urlfetch.get(%s)" % url)
+
 def get_ei_data(cc, indicator, partner_cc="all"):
     url = "http://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/%s/year/all/partner/%s/indicator/%s?format=JSON" % (
         cc.lower(),
         partner_cc.lower(),
         indicator.upper()
     )
-    response = urlfetch.get(url)
-    if response.status != 200:
-        raise Exception("Invalid Status Code: %s (cc: %s)" % (response.status, cc))
 
+    try:
+        response = urlfetch.get(url)
+        if response.status != 200:
+            response.close()
+            raise Exception("Invalid Status Code: %s (cc: %s)" % (response.status, cc))
+        response.text
+
+        # reset if no data exists. -.-
+    except (ConnectionResetError, urlfetch.UrlfetchException):
+        response = get_retry(url.replace("?format=JSON", ""))
+        response.close()
+
+        if response.status != 404:
+            raise Exception("Connection Failure")
+        return None
+    
     data = json.loads(response.text)
+    response.close()
     return data
 
 def get_partner_data(base_cc, partner_cc, indicator="XPRT-TRD-VL"):
@@ -25,11 +62,24 @@ def get_partner_data(base_cc, partner_cc, indicator="XPRT-TRD-VL"):
         partner_cc.lower(),
         indicator.upper()
     )
-    response = urlfetch.get(url)
-    if response.status != 200:
-        raise Exception("Invalid Status Code: base_country=%s, partner_country=%s" % (base_cc, partner_cc))
+
+    try:
+        response = urlfetch.get(url)
+        if response.status != 200:
+            response.close()
+            raise Exception("Invalid Status Code: base_country=%s, partner_country=%s" % (base_cc, partner_cc))
+        response.text
+
+        # reset if no data exists. -.-
+    except (ConnectionResetError, urlfetch.UrlfetchException):
+        response = get_retry(url.replace("?format=JSON", ""))
+        response.close()
+        if response.status != 404:
+            raise Exception("Connection Failure")
+        return None
 
     data = json.loads(response.text)
+    response.close()
     return data
 
 def get_export_data(cc):
@@ -118,6 +168,9 @@ def get_cc_aggregates_data(cc):
     yearly_export_cats = get_world_exports_by_categories(cc)
     yearly_import_cats = get_world_imports_by_categories(cc)
 
+    if not yearly_export_cats or not yearly_import_cats:
+        return response
+    
     # parse raw data
     yearly_export_cats = extract_cats_years(yearly_export_cats)
     yearly_import_cats = extract_cats_years(yearly_import_cats)
@@ -128,37 +181,50 @@ def get_cc_aggregates_data(cc):
     for year in years_s:
         response["years"].append({
             "year": year,
-            "imports": yearly_import_cats[year],
-            "exports": yearly_export_cats[year]
+            "imports": yearly_import_cats.get(year, []),
+            "exports": yearly_export_cats.get(year, [])
         })
 
     return response
 
-def get_country_data(cc):
-    yearly_export_categories = get_world_exports_by_categories(cc)
-    yearly_import_categories = get_world_imports_by_categories(cc)
+#####################################################
+def generate_yearly_aggregates():
+    ccs = cc_list()
+    ccs_len = len(ccs)
+
+    for i in range(0, ccs_len):
+        console.printProgressBar(i, ccs_len)
+
+        cc = ccs[i]
+        data = get_cc_aggregates_data(cc)
+        name = "aggregate_%s" % cc.lower()
+        set_json_file(name, data)
+
+    print("Data has been downloaded!")
 
 
+def generate_cc_list():
+    dct = cc_dict()
+    set_json_file("cc_list", dct)
+    print("CC List has been generated!")
 
-
-    exp_data = get_export_data(cc)
-    exp_ccs = extract_cc_set(exp_data)
-
-    imp_data = get_import_data(cc)
-    imp_ccs = extract_cc_set(imp_data)
-
-    partner_ccs = exp_ccs.union( imp_css)
-    for partner_cc in ccs:
-        partner_data = get_partner_data(cc, partner_cc)
-        raise Exception("test")
 
 def main():
-    pass
+    while True:
+        opt = console.select_option("Select which Data you want to download", [
+            {"id": "yagg", "desc": "Yearly aggregates for every Country"},
+            {"id": "ccli", "desc": "Country Codes List"}
+        ])
 
-#d = get_world_exports_by_categories("usa")
-#parsed = extract_cats_years(d)
-print(get_cc_aggregates_data("usa"))
+        if opt == "yagg":
+            generate_yearly_aggregates()
+        
+        if opt == "ccli":
+            generate_cc_list()
 
+        input("Press Enter to continue")
+
+main()
 #d = get_import_data("USA")
 #print extract_cc_set(d)
 #print len(cc_list())
