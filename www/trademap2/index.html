@@ -91,12 +91,35 @@
 			]);
 
 			var pieData = google.visualization.arrayToDataTable([
-				['Task', 'Hours per Day'],
-				['Work', 11],
-				['Eat', 2],
-				['Commute', 2],
-				['Watch TV', 2],
-				['Sleep', 7]
+				['WareItem','units'],
+				['Animal',5],
+				['Vegetable',5],
+				['Food Products',5],
+				['Minerals',1],
+				['Fuels',1],
+				['Chemicals',1],
+				['Plastic or Rubber',1],
+				['Hides and Skins',1],
+				['Wood',1],
+				['Textiles and Clothing',1],
+				['Footwear',1],
+				['Stone and Glass',1],
+				['Metals',1],
+				['Mach and Elec',1],
+				['Transportation',1],
+				['Miscellaneous',1], 
+				['Agricultural Raw Materials',1], 
+				['Chemical',1], 
+				['Food',1], 
+				['Fuel',1],
+				['Manufactures',1],
+				['Ores and Metals',1], 
+				['Textiles',1], 
+				['Machinery and Transport Equipment',1],
+				['Raw materials',1],
+				['Intermediate goods',1], 
+				['Consumer goods',1]/*, 
+				['Capital goods',1]​*/
 			]);
 
 
@@ -107,7 +130,7 @@
 
 			var pieOptions = {
 				chartArea: {'width': '100%', 'height': '100%'},
-				legend: 'none'
+				legend: 'none',
 			};
 
 
@@ -116,18 +139,31 @@
 
 			var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
 			piechart.draw(pieData, pieOptions);
+			
+			var linedata = new google.visualization.DataTable();
+			var linerawdata = ['Animal', 'Vegetable', 'Food Products', 'Minerals', 'Fuels', 'Chemicals', 'Plastic or Rubber', 'Hides and Skins', 'Wood', 'Textiles and Clothing', 'Footwear', 'Stone and Glass', 'Metals', 'Mach and Elec', 'Transportation', 'Miscellaneous', 'Agricultural Raw Materials', 'Chemical', 'Food', 'Fuel', 'Manufactures', 'Ores and Metals', 'Textiles', 'Machinery and Transport Equipment', 'Raw materials', 'Intermediate goods', 'Consumer goods', 'Capital goods'];
+			linedata.addColumn('number','year');
+			for(tmp of linerawdata){
+				linedata.addColumn('number',tmp);
+			}
 
-			var linedata = google.visualization.arrayToDataTable([
-				['Year', 'Sales', 'Expenses'],
-				['2004', 1000, 400],
-				['2005', 1170, 460],
-				['2006', 660, 1120],
-				['2007', 1030, 540]
+			let rawArr = new Array(linerawdata.length);
+			rawArr.fill(1);
+			let arr1 = rawArr.map( i => Math.floor((Math.random() * 100) + 1));
+			let arr2 = rawArr.map( i => Math.floor((Math.random() * 200) + 1));
+
+			linedata.addRows([
+				[2000].concat(arr1),
+				[2008].concat(arr2)
 			]);
+
 
 			var lineoptions = {
 				curveType: 'function',
-				legend: 'none'
+				legend: 'none',
+				hAxis: {
+					format: '####'
+				}
 			};
 
 			var linechart = new google.visualization.LineChart(document.getElementById('curve_chart'));
