@@ -14,7 +14,7 @@
 		}
 
 		table,tbody {
-			vertical-align: top
+			vertical-align: top;
 		}
 
 	
@@ -34,9 +34,6 @@
 		  width: 100%;
 		}
 
-		.noUi-horizontal {
-		    height: 8px;
-		}
 
 		.noUi-horizontal .noUi-handle-lower .noUi-tooltip{
 			top: 50px;
@@ -75,9 +72,7 @@
 		  border-width: 6px 6px
 		}
 
-		.noUi-connect {
-			background-color: #990033;
-		}
+
 
 		.noUi-horizontal .noUi-handle {
 		    width: 40px;
@@ -87,17 +82,7 @@
 		    opacity: 0.9;
 		}
 
-		.input-tooltip{
-			position: absolute;
-			top: 0;
-			left: 0;
-			max-width: 100px;
-			border: none;
-			height: 30px;
-			padding: 5px;
-			box-sizing: border-box;
-		  	text-align: center;
-		}
+
 
 		.noUi-horizontal .noUi-tooltip {
 			bottom: -55px !important;
@@ -351,9 +336,9 @@
 	<table style="width:100%; height:100%; position: absolute; top:0; left:0">
 		<tr style="height:10%; width: 100%">
 			<th style="width:70%; vertical-align: center">
-				<div id="container">
+				<div style="vertical-align: bottom" id="container">
 					Select Country: <input style="width:100%;" type="text" name="c_selector" id="c_selector"/>
-					Select Year: <div style="width:100%; margin-top:20px" id="year_slider">
+					Select Year: <div style="width:100%; position: relative; top:10px" id="year_slider"></div>
 				</div>
 			</th>
 			<th style="width:30%">
