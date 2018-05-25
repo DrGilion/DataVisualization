@@ -34,9 +34,6 @@
 		  width: 100%;
 		}
 
-		.noUi-horizontal {
-		    height: 8px;
-		}
 
 		.noUi-horizontal .noUi-handle-lower .noUi-tooltip{
 			top: 50px;
@@ -75,9 +72,7 @@
 		  border-width: 6px 6px
 		}
 
-		.noUi-connect {
-			background-color: #990033;
-		}
+
 
 		.noUi-horizontal .noUi-handle {
 		    width: 40px;
@@ -87,23 +82,13 @@
 		    opacity: 0.9;
 		}
 
-		.input-tooltip{
-			position: absolute;
-			top: 0;
-			left: 0;
-			max-width: 100px;
-			border: none;
-			height: 30px;
-			padding: 5px;
-			box-sizing: border-box;
-		  	text-align: center;
-		}
+
 
 		.noUi-horizontal .noUi-tooltip {
 			bottom: -55px !important;
 		}
-		
-		
+
+
 	</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -112,15 +97,15 @@
 	<link rel="stylesheet" href="easyac/easy-autocomplete.min.css">
 	<link rel="stylesheet" href="nouislider/nouislider.min.css">
 
-	
+
 	<script type="text/javascript">
 		// Load Tradedata
 		var tdata;
 
 		function getCountries() {
 			var lst = [];
-			$.each(tdata["cc_index"], function (k, v) {
-				lst.push({ "name": v["Name"], "code": k });
+			$.each(tdata, function (k, v) {
+				lst.push({ "name": v, "code": k });
 			});
 			return lst;
 		}
@@ -132,7 +117,8 @@
 				getValue: "name",
 				list: {
 					onChooseEvent: function () {
-						selectedCountry();
+						//selectedCountry();
+						loadDataForSelectedCountry();
 					},
 					match: {
 						enabled: true
@@ -144,9 +130,7 @@
 		});
 
 		$(document).ready(function () {
-			
-
-			$.getJSON("data.json", function (data) {
+			$.getJSON("data/cc_list.json", function (data) {
 				tdata = data;
 				$(document).trigger("tdata_loaded");
 			});
@@ -161,6 +145,8 @@
 			'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
 		});
 		google.charts.setOnLoadCallback(drawRegionsMap);
+
+
 
 		function drawRegionsMap() {
 			var geodata = google.visualization.arrayToDataTable([
@@ -229,35 +215,7 @@
 			var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
 			piechart.draw(pieData, pieOptions);
 			
-			var linedata = new google.visualization.DataTable();
-			var linerawdata = ['Animal', 'Vegetable', 'Food Products', 'Minerals', 'Fuels', 'Chemicals', 'Plastic or Rubber', 'Hides and Skins', 'Wood', 'Textiles and Clothing', 'Footwear', 'Stone and Glass', 'Metals', 'Mach and Elec', 'Transportation', 'Miscellaneous', 'Agricultural Raw Materials', 'Chemical', 'Food', 'Fuel', 'Manufactures', 'Ores and Metals', 'Textiles', 'Machinery and Transport Equipment', 'Raw materials', 'Intermediate goods', 'Consumer goods', 'Capital goods'];
-			linedata.addColumn('number','year');
-			for(tmp of linerawdata){
-				linedata.addColumn('number',tmp);
-			}
 
-			let rawArr = new Array(linerawdata.length);
-			rawArr.fill(1);
-			let arr1 = rawArr.map( i => Math.floor((Math.random() * 100) + 1));
-			let arr2 = rawArr.map( i => Math.floor((Math.random() * 200) + 1));
-
-			linedata.addRows([
-				[2000].concat(arr1),
-				[2008].concat(arr2)
-			]);
-
-
-			var lineoptions = {
-				curveType: 'function',
-				legend: 'none',
-				colors: colors,
-				hAxis: {
-					format: '####'
-				}
-			};
-
-			var linechart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-			linechart.draw(linedata, lineoptions);
 
 
 			var treedata = google.visualization.arrayToDataTable([
@@ -296,6 +254,56 @@
 				fontColor: 'black',
 				showScale: false
 			});
+		}
+
+		function drawLineChart(){
+
+			var linedata = new google.visualization.DataTable();
+			var linerawdata =[];
+
+			linedata.addColumn('number','Year');
+			for(trades of tradeDataLineChart){
+
+				for(imports of trades.imports)
+					if(!linerawdata.includes(imports.name))
+						linerawdata.push(imports.name);
+			}
+
+			for(tmp of linerawdata){
+				linedata.addColumn('number',tmp);
+			}
+
+			var rawArr =[];
+
+			for(trades of tradeDataLineChart){
+				var inputs =[];
+				inputs.push(trades.year);
+				for(imports of trades.imports){
+						inputs.push(imports.percent);
+					}
+				rawArr.push(inputs);
+			}
+
+
+			linedata.addRows(rawArr);
+
+			var lineoptions = {
+				curveType: 'function',
+				legend: 'none',
+				hAxis: {
+					format: '####'
+				}
+			};
+
+			var linechart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+			linechart.clearChart();
+
+
+			linechart.draw(linedata, lineoptions);
+			rawArr=[];
+			linerawdata=[];
+			linedata.removeColumns(0,linedata.getNumberOfColumns());
+			linedata.removeRows(0,linedata.getNumberOfRows());
 		}
 
 		function getTotal(dataArray) {
@@ -341,7 +349,63 @@
 				tooltips: true
 			});
 		});
-		
+
+	</script>
+
+	<script type="text/javascript">
+
+		var  tradeDataLineChart = [];
+		var  jsonTradeData;
+
+		function loadDataForSelectedCountry() {
+
+			var code = $("#c_selector").getSelectedItemData().code;
+			code = code.toLowerCase();
+
+			$.getJSON("data/aggregate_"+code+".json", function (data) {
+
+				jsonTradeData = data;
+				$(document).trigger("selectedTradeDataLoaded");
+			});
+
+		}
+
+		function getDataFromLoadedDataForSelectedCountry(){
+			tradeDataLineChart = [];
+			$.each(jsonTradeData["years"], function(year,data){
+
+				var yearExport = [];
+				var yearImport = [];
+
+				$.each(data["imports"],function(name,percent){
+					if(percent.id !== "Total")
+						yearImport.push({"name":percent.name,"percent":percent.percent})
+
+				});
+
+				$.each(data["exports"],function(name,percent){
+					if(percent.id !== "Total")
+						yearExport.push({"name":percent.name,"percent":percent.percent})
+
+				});
+
+				tradeDataLineChart.push({"year":data.year,"imports":yearImport, "exports":yearExport})
+			});
+
+
+			drawLineChart();
+		}
+
+		$(document).on("selectedTradeDataLoaded", function () {
+
+			var options =getDataFromLoadedDataForSelectedCountry();
+
+
+			$("#c_selector").easyAutocomplete(options);
+			$("#r_selector").easyAutocomplete(options);
+		});
+
+
 	</script>
 
 </head>
@@ -351,14 +415,19 @@
 	<table style="width:100%; height:100%; position: absolute; top:0; left:0">
 		<tr style="height:10%; width: 100%">
 			<th style="width:70%; vertical-align: center">
-				<div id="container">
+				<div style="vertical-align: bottom" id="container">
 					Select Country: <input style="width:100%;" type="text" name="c_selector" id="c_selector"/>
-					Select Year: <div style="width:100%; margin-top:20px" id="year_slider">
+					Select Year: <div style="width:100%; position: relative; top:10px" id="year_slider"></div>
 				</div>
 			</th>
 			<th style="width:30%">
 				<div class="arrange-horizontally" style="float: left;">
 					Select Resource: <input type="text" name="r_selector" id="r_selector" />
+					Mode: <select>
+					<option value="absolute">Absolute</option>
+					<option value="export">Export</option>
+					<option value="import">Import</option>
+				</select>
 				</div>
 			</th>
 		</tr>
