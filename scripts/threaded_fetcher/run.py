@@ -2,7 +2,7 @@ import time, misc
 from ImportMaster import ImportMaster
 
 clear = lambda: print("\033[H\033[J")
-master = ImportMaster("ressources/cc.txt")
+master = ImportMaster("ressources/cc.txt", 8)
 master.start()
 
 while master.is_alive():

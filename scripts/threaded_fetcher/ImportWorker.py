@@ -27,7 +27,10 @@ class ImportWorker(threading.Thread):
         """
 
         final_data["cc"] = cc
-        final_data["data"] = {}
+        final_data["data"] = {
+            "import": {},
+            "export": {}
+        }
 
         for ttype in Worldbank.trade_types:
             for product in Worldbank.product_codes:
@@ -37,7 +40,13 @@ class ImportWorker(threading.Thread):
                     continue
 
                 data = Worldbank.get_products_data(data)
-                final_data["data"][ttype] = data
+                for pcode in data.keys():
+                    dc = final_data["data"][ttype].get(pcode, {})
+                    for year in data[pcode].keys():
+                        yd = dc.get(year, {})
+                        yd.update(data[pcode][year])
+                        dc[year] = yd
+                    final_data["data"][ttype][pcode] = dc
 
         self.items_processed += 1
         self.output_queue.put(final_data)
