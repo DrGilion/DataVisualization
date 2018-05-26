@@ -94,9 +94,43 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="easyac/jquery.easy-autocomplete.min.js"></script>
 	<script src="nouislider/nouislider.min.js"></script>
+	<script src="wnumb-1.1.0/wNumb.js"></script>
 	<link rel="stylesheet" href="easyac/easy-autocomplete.min.css">
 	<link rel="stylesheet" href="nouislider/nouislider.min.css">
 
+
+	<script>
+		const resourceColorTable = {
+			'Animal':'#ccbb55',
+			'Vegetable':'#66aa00',
+			'Food Products':'#ff9900',
+			'Minerals':'#3366cc',
+			'Fuels':'#b82e2e',
+			'Chemicals':'#33ff11',
+			'Plastic or Rubber':'#e31b23',
+			'Hides and Skins':'#666622',
+			'Wood':'#b77322',
+			'Textiles and Clothing':'#f4359e',
+			'Footwear':'#00ddff',
+			'Capital goods':'#109618',
+			'Stone and Glass':'#22aa99',
+			'Metals':'#336677',
+			'Mach and Elec':'#ffee11',
+			'Transportation':'#ff8833',
+			'Miscellaneous':'#333333', 
+			'Agricultural Raw Materials':'#668811', 
+			'Chemical':'#66cc11', 
+			'Food':'#0099bb', 
+			'Fuel':'#d32e2e',
+			'Manufactures':'#dc3912',
+			'Ores and Metals':'#330011', 
+			'Textiles':'#994499', 
+			'Machinery and Transport Equipment':'#9977bb',
+			'Raw materials':'#6600bb',
+			'Intermediate goods':'#990033', 
+			'Consumer goods':'#6699cc'
+		};
+	</script>
 
 	<script type="text/javascript">
 		// Load Tradedata
@@ -346,10 +380,25 @@
 					min:  1900,
 					max:  2018
 				},
-				tooltips: true
+				tooltips: true,
+				format: wNumb({
+					decimals: 0
+				})
+			});
+			
+			yearslider.noUiSlider.on('end', function(values, handle){
+				console.log("selected year: " + values[handle]);
+				//TODO slider values has changed -> update GeoChart
 			});
 		});
 
+	</script>
+		
+	<script>
+		function modeSelection(selectedValue){
+			console.log("selected resource mode: " + selectedValue);
+			//TODO resource mode changes -> update PieChart and LineChart
+		}
 	</script>
 
 	<script type="text/javascript">
@@ -423,11 +472,11 @@
 			<th style="width:30%">
 				<div class="arrange-horizontally" style="float: left;">
 					Select Resource: <input type="text" name="r_selector" id="r_selector" />
-					Mode: <select>
-					<option value="absolute">Absolute</option>
-					<option value="export">Export</option>
-					<option value="import">Import</option>
-				</select>
+					Mode: <select onchange="modeSelection(this.value)">
+						<option value="absolute">Absolute</option>
+						<option value="export">Export</option>
+						<option value="import">Import</option>
+					</select>
 				</div>
 			</th>
 		</tr>
