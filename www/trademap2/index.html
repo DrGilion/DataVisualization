@@ -99,8 +99,8 @@
 	<link rel="stylesheet" href="nouislider/nouislider.min.css">
 
 
-	<script>
-		const resourceColorTable = {
+	<script type="text/javascript">
+		var resourceColorTable = {
 			'Animal':'#ccbb55',
 			'Vegetable':'#66aa00',
 			'Food Products':'#ff9900',
@@ -160,7 +160,19 @@
 				}
 			};
 			$("#c_selector").easyAutocomplete(options);
-			$("#r_selector").easyAutocomplete(options);
+			
+			options = {
+				data: Object.keys(resourceColorTable),
+				list: {
+					onChooseEvent: function () {
+						//TODO load data for chosen resouce
+					},
+					match: {
+						enabled: true
+					}
+				}
+			};
+			$("#res_selector").easyAutocomplete(options);
 		});
 
 		$(document).ready(function () {
@@ -200,9 +212,15 @@
 
 			var geochart = new google.visualization.GeoChart(document.getElementById('maps_chart'));
 			geochart.draw(geodata, geooptions);
-
-
-			const colors = ['#3366cc','#dc3912','#ff9900','#66aa00','#b82e2e','#994499','#22aa99','#b77322','#f4359e','#109618'];
+			
+			drawPieChart();
+			
+			drawTreeMap();
+			
+		}
+		
+		function drawPieChart(){
+			const colors = ['#3366cc','#dc3912','#ff9900','#66aa00','#b82e2e','#994499','#22aa99','#b77322','#f4359e','#109618']; //TODO only temporary colors. use resourceColorTable for finished product
 
 			let rawPieData = [
 				['Animal',5],
@@ -248,10 +266,9 @@
 
 			var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
 			piechart.draw(pieData, pieOptions);
-			
-
-
-
+		}
+		
+		function drawTreeMap(){
 			var treedata = google.visualization.arrayToDataTable([
 				['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
 				['Global', null, 0, 0],
@@ -278,16 +295,18 @@
 				['Congo', 'Global', 10, 12],
 				['Zaire', 'Global', 8, 10]
 			]);
-
-			var tree = new google.visualization.TreeMap(document.getElementById('tree_chart'));
-			tree.draw(treedata, {
+			
+			var treeOptions = {
 				minColor: '#e31b23',
 				midColor: '#fff',
 				maxColor: '#00853f',
 				headerHeight: 0,
 				fontColor: 'black',
 				showScale: false
-			});
+			};
+
+			var tree = new google.visualization.TreeMap(document.getElementById('tree_chart'));
+			tree.draw(treedata, treeOptions);
 		}
 
 		function drawLineChart(){
@@ -394,7 +413,7 @@
 
 	</script>
 		
-	<script>
+	<script type="text/javascript">
 		function modeSelection(selectedValue){
 			console.log("selected resource mode: " + selectedValue);
 			//TODO resource mode changes -> update PieChart and LineChart
@@ -446,12 +465,7 @@
 		}
 
 		$(document).on("selectedTradeDataLoaded", function () {
-
-			var options =getDataFromLoadedDataForSelectedCountry();
-
-
-			$("#c_selector").easyAutocomplete(options);
-			$("#r_selector").easyAutocomplete(options);
+			getDataFromLoadedDataForSelectedCountry();
 		});
 
 
@@ -471,7 +485,7 @@
 			</th>
 			<th style="width:30%">
 				<div class="arrange-horizontally" style="float: left;">
-					Select Resource: <input type="text" name="r_selector" id="r_selector" />
+					Select Resource: <input type="text" name="res_selector" id="res_selector" />
 					Mode: <select onchange="modeSelection(this.value)">
 						<option value="absolute">Absolute</option>
 						<option value="export">Export</option>

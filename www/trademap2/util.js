@@ -22,3 +22,11 @@ function CSVtoJSON(csv){
   return result; //JavaScript object
   //return JSON.stringify(result); //JSON
 }
+
+function CSVtoJSONstring(csv){
+	return JSON.stringify(CSVtoJSON(csv));
+}
+
+function clamp(num, min, max) {
+	return num <= min ? min : num >= max ? max : num;
+}
