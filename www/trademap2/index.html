@@ -88,7 +88,6 @@
 			bottom: -55px !important;
 		}
 
-
 	</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -130,6 +129,29 @@
 			'Intermediate goods':'#990033', 
 			'Consumer goods':'#6699cc'
 		};
+
+		//constructing legend
+		$('document').ready( () => {
+            let legendtable = document.getElementById('legend_table');
+
+            for(let key in resourceColorTable){
+				let lText = document.createTextNode(key);
+				let tdText = document.createElement("td");
+				tdText.appendChild(lText);
+				tdText.style.width = "50%";
+
+                let tdColor = document.createElement("td");
+                tdColor.style.backgroundColor = resourceColorTable[key];
+                tdColor.style.width = "50%";
+
+                let tablerow = document.createElement('tr');
+				tablerow.appendChild(tdText);
+				tablerow.appendChild(tdColor);
+
+				legendtable.appendChild(tablerow);
+            }
+		});
+
 	</script>
 
 	<script type="text/javascript">
@@ -500,7 +522,18 @@
 			</td>
 			<td style="width:30%;">
 				<div id="piechart" style="height:50%; width:100%"></div>
-				<div id="legend" style="height:10%; width:100%">Hello World!</div>
+				<div id="legend" style="height:10%; width:100%;">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+							<td>
+								<div style="height:80px; overflow:auto;">
+									<table id="legend_table" cellspacing="0" cellpadding="1" border="1" width="100%" ></table>
+								</div>
+							</td>
+						</tr>
+
+					</table>
+				</div>
 				<div id="curve_chart" style="height:40%; width:100%"></div>
 			</td>
 		</tr>
