@@ -20,6 +20,13 @@ class Slicer:
         ccl = [c.split(' ', 1) for c in content]
         for cco in ccl:
             ccs[cco[0]] = cco[1]
+            if cco[1].count(",") == 1:
+                parts = cco[1].split(',', 1)
+                complete = "%(pre)s (%(post)s %(pre)s)" % {
+                    "pre" : parts[0].strip(),
+                    "post" : parts[1].strip()
+                }
+                ccs[cco[0]] = complete
         return ccs
 
     def set_json_file(self, name, data):
@@ -46,13 +53,16 @@ class Slicer:
         for c in self.data:
             cc = c["cc"]
 
+            all_products = set(c["data"]["import"].keys())
+            all_products.update(c["data"]["export"].keys())
+
+            if len(all_products) == 0:
+                continue
+
             result[cc] = {
                 "full_name": ccs[cc],
                 "years":{}
             }
-
-            all_products = set(c["data"]["import"].keys())
-            all_products.update(c["data"]["export"].keys())
 
             for product in all_products:
                 imports = c["data"]["import"].get(product, {})
@@ -60,8 +70,7 @@ class Slicer:
 
                 all_years = set(imports.keys())
                 all_years.update(exports.keys())
-                if len(all_years) > 0:
-                    result[cc]["years"][product] = sorted(list(all_years))
+                result[cc]["years"][product] = sorted(list(all_years))
 
         self.set_json_file("countries", result)
 
