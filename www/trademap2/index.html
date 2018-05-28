@@ -138,8 +138,9 @@
 
 		function getCountries() {
 			var lst = [];
-			$.each(tdata, function (k, v) {
-				lst.push({ "name": v, "code": k });
+            $.each(tdata, function(i,arrayData) {
+				lst.push({ "name": arrayData[1], "code": arrayData[0] });
+
 			});
 			return lst;
 		}
@@ -176,8 +177,29 @@
 		});
 
 		$(document).ready(function () {
-			$.getJSON("data/cc_list.json", function (data) {
-				tdata = data;
+			$.getJSON("http://localhost:8080/vis_data/countries.json", function (data) {
+				//tdata = data;
+				var countries=[];
+
+                $.each(data, function(code,cdata) {
+                    var country=[];
+					country.push(code);
+					country.push(cdata["full_name"]);
+					var yearCounter= [];
+
+                    $.each(cdata["years"], function(trade,years) {
+
+						for(year of years){
+						    if(!yearCounter.includes(year))
+						    	yearCounter.push(year);
+						}
+                    });
+                    country.push(yearCounter);
+                    countries.push(country);
+                });
+
+
+				tdata=countries;
 				$(document).trigger("tdata_loaded");
 			});
 		});
@@ -213,7 +235,7 @@
 			var geochart = new google.visualization.GeoChart(document.getElementById('maps_chart'));
 			geochart.draw(geodata, geooptions);
 			
-			drawPieChart();
+
 			
 			drawTreeMap();
 			
@@ -222,36 +244,19 @@
 		function drawPieChart(){
 			const colors = ['#3366cc','#dc3912','#ff9900','#66aa00','#b82e2e','#994499','#22aa99','#b77322','#f4359e','#109618']; //TODO only temporary colors. use resourceColorTable for finished product
 
-			let rawPieData = [
-				['Animal',5],
-				['Vegetable',5],
-				['Food Products',5],
-				['Minerals',3],
-				['Fuels',3],
-				['Chemicals',2],
-				['Plastic or Rubber',4],
-				['Hides and Skins',15],
-				['Wood',5],
-				['Textiles and Clothing',6],
-				['Footwear',7],
-				['Capital goods',1],
-				['Stone and Glass',10],
-				['Metals',8],
-				['Mach and Elec',5],
-				['Transportation',8],
-				['Miscellaneous',8], 
-				['Agricultural Raw Materials',9], 
-				['Chemical',10], 
-				['Food',10], 
-				['Fuel',10],
-				['Manufactures',15],
-				['Ores and Metals',40], 
-				['Textiles',3], 
-				['Machinery and Transport Equipment',1],
-				['Raw materials',2],
-				['Intermediate goods',11], 
-				['Consumer goods',12]
-			];
+            var yearslider = document.getElementById('year_slider');
+
+			let rawPieData = [ ];
+            for(trades of tradeDataLineChart){
+                if(yearslider.noUiSlider.get()==trades.year) {
+
+                    for (imports of trades.imports) {
+                        rawPieData.push([imports.name, imports.percent]);
+                    }
+                }
+            }
+
+
 			var pieData = google.visualization.arrayToDataTable([['WareItem','units']].concat(rawPieData));
 			pieData.sort({column: 1, desc: true});
 			//calculating threshold to display top 10 values
@@ -261,7 +266,8 @@
 				chartArea: {'width': '100%', 'height': '100%'},
 				legend: 'none',
 				colors: colors,
-				sliceVisibilityThreshold: pieDataThreshold
+				sliceVisibilityThreshold: pieDataThreshold,
+                is3D: true
 			};
 
 			var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -317,9 +323,11 @@
 			linedata.addColumn('number','Year');
 			for(trades of tradeDataLineChart){
 
-				for(imports of trades.imports)
-					if(!linerawdata.includes(imports.name))
-						linerawdata.push(imports.name);
+				for(imports of trades.imports) {
+
+                    if (!linerawdata.includes(imports.name))
+                        linerawdata.push(imports.name);
+                }
 			}
 
 			for(tmp of linerawdata){
@@ -329,15 +337,17 @@
 			var rawArr =[];
 
 			for(trades of tradeDataLineChart){
+
 				var inputs =[];
 				inputs.push(trades.year);
+
 				for(imports of trades.imports){
 						inputs.push(imports.percent);
 					}
 				rawArr.push(inputs);
 			}
 
-
+			debugger;
 			linedata.addRows(rawArr);
 
 			var lineoptions = {
@@ -358,6 +368,8 @@
 			linedata.removeColumns(0,linedata.getNumberOfColumns());
 			linedata.removeRows(0,linedata.getNumberOfRows());
 		}
+
+
 
 		function getTotal(dataArray) {
 			let total = 0;
@@ -406,9 +418,16 @@
 			});
 			
 			yearslider.noUiSlider.on('end', function(values, handle){
-				console.log("selected year: " + values[handle]);
+				//console.log("selected year: " + values[handle]);
+				drawPieChart();
 				//TODO slider values has changed -> update GeoChart
 			});
+
+            yearslider.noUiSlider.on('slide', function(values, handle){
+                //console.log("selected year: " + values[handle]);
+                drawPieChart();
+                //TODO slider values has changed -> update GeoChart
+            });
 		});
 
 	</script>
@@ -430,38 +449,43 @@
 			var code = $("#c_selector").getSelectedItemData().code;
 			code = code.toLowerCase();
 
-			$.getJSON("data/aggregate_"+code+".json", function (data) {
+
+			$.getJSON("http://localhost:8080/vis_data/aggregate_"+code+".json",function(data){
 
 				jsonTradeData = data;
-				$(document).trigger("selectedTradeDataLoaded");
+                $(document).trigger("selectedTradeDataLoaded");
 			});
 
 		}
 
 		function getDataFromLoadedDataForSelectedCountry(){
-			tradeDataLineChart = [];
-			$.each(jsonTradeData["years"], function(year,data){
+
+
+
+			$.each(jsonTradeData["years"], function(i,year){
 
 				var yearExport = [];
 				var yearImport = [];
 
-				$.each(data["imports"],function(name,percent){
+				$.each(year.imports,function(name,percent){
+
 					if(percent.id !== "Total")
-						yearImport.push({"name":percent.name,"percent":percent.percent})
+						yearImport.push({"name":percent.id,"percent":percent.percent})
 
 				});
 
-				$.each(data["exports"],function(name,percent){
+				$.each(year.imports,function(name,percent){
 					if(percent.id !== "Total")
-						yearExport.push({"name":percent.name,"percent":percent.percent})
+						yearExport.push({"name":percent.id,"percent":percent.percent})
 
 				});
 
-				tradeDataLineChart.push({"year":data.year,"imports":yearImport, "exports":yearExport})
+				tradeDataLineChart.push({"year":year.year,"imports":yearImport, "exports":yearExport})
 			});
 
 
 			drawLineChart();
+            drawPieChart();
 		}
 
 		$(document).on("selectedTradeDataLoaded", function () {
