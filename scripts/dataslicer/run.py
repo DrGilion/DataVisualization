@@ -2,5 +2,5 @@ import  collections
 
 
 import Slicer
-slicer = Slicer.Slicer("/home/stud/matesanz/Desktop/DataVisualization/scripts/threaded_fetcher/data/complete.json")
+slicer = Slicer.Slicer("/tmp/dl/complete.json", "/tmp/vis_data/")
 slicer.generate_data()

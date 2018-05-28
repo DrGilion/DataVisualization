@@ -1,4 +1,4 @@
-import json, collections
+import json, collections, csv
 
 class Slicer:
     def __init__(self, dump_file, output_dir='data/'):
@@ -12,16 +12,58 @@ class Slicer:
             with open(self.dump_file, 'r') as f:
                 self.data = json.load(f)
 
+    def get_ccs(self):
+        with open('ressources/cc.txt') as f:
+            content = f.read().splitlines()
+
+        ccs = {}
+        ccl = [c.split(' ', 1) for c in content]
+        for cco in ccl:
+            ccs[cco[0]] = cco[1]
+        return ccs
+
     def set_json_file(self, name, data):
         file = '%s%s.json' % (self.output_dir, name)
         with open(file, 'w') as f:
             f.write(json.dumps(data))
 
     def gen_cats_file(self):
-        pass
+        cats = {}
+
+        with open('ressources/products.csv') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                cats[row['ProductGroup']] = row['ProductGroupDescription'].strip()
+
+        self.set_json_file("categories", cats)
 
     def gen_cc_file(self):
-        pass
+        self.init()
+
+        ccs = self.get_ccs()
+        result = {}
+
+        for c in self.data:
+            cc = c["cc"]
+
+            result[cc] = {
+                "full_name": ccs[cc],
+                "years":{}
+            }
+
+            all_products = set(c["data"]["import"].keys())
+            all_products.update(c["data"]["export"].keys())
+
+            for product in all_products:
+                imports = c["data"]["import"].get(product, {})
+                exports = c["data"]["export"].get(product, {})
+
+                all_years = set(imports.keys())
+                all_years.update(exports.keys())
+                result[cc]["years"][product] = sorted(list(all_years))
+
+        self.set_json_file("countries", result)
+
 
     def slice_country_products_partners(self):
         self.init()
@@ -48,7 +90,7 @@ class Slicer:
                         "year":year,
                         "product":product.lower()
                     }
-                    
+
                     data = {
                         "imports": [
                             {"cc":cc, "amount":y_imports[cc]}
@@ -113,4 +155,6 @@ class Slicer:
     def generate_data(self):
         self.slice_country_products_partners()
         self.slice_country_aggregates()
+        self.gen_cc_file()
+        self.gen_cats_file()
 
