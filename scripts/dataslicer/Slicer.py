@@ -60,7 +60,8 @@ class Slicer:
 
                 all_years = set(imports.keys())
                 all_years.update(exports.keys())
-                result[cc]["years"][product] = sorted(list(all_years))
+                if len(all_years) > 0:
+                    result[cc]["years"][product] = sorted(list(all_years))
 
         self.set_json_file("countries", result)
 
