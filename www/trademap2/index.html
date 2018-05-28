@@ -369,7 +369,7 @@
 				rawArr.push(inputs);
 			}
 
-			debugger;
+
 			linedata.addRows(rawArr);
 
 			var lineoptions = {
@@ -383,7 +383,7 @@
 			var linechart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 			linechart.clearChart();
 
-
+			
 			linechart.draw(linedata, lineoptions);
 			rawArr=[];
 			linerawdata=[];
@@ -481,7 +481,7 @@
 		}
 
 		function getDataFromLoadedDataForSelectedCountry(){
-
+            tradeDataLineChart = [];
 
 
 			$.each(jsonTradeData["years"], function(i,year){
@@ -502,10 +502,14 @@
 
 				});
 
-				tradeDataLineChart.push({"year":year.year,"imports":yearImport, "exports":yearExport})
+				tradeDataLineChart.push({"year":parseInt(year.year),"imports":yearImport, "exports":yearExport})
 			});
 
+            tradeDataLineChart.sort(function (a,b) {
 
+				return b.year-a.year;
+
+            });
 			drawLineChart();
             drawPieChart();
 		}
