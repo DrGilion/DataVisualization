@@ -135,18 +135,14 @@
             let legendtable = document.getElementById('legend_table');
 
             for(let key in resourceColorTable){
-				let lText = document.createTextNode(key);
-				let tdText = document.createElement("td");
-				tdText.appendChild(lText);
-				tdText.style.width = "50%";
-
-                let tdColor = document.createElement("td");
-                tdColor.style.backgroundColor = resourceColorTable[key];
-                tdColor.style.width = "50%";
+                let colorItem = document.createElement("td");
+                colorItem.style.backgroundColor = resourceColorTable[key];
+				colorItem.style.color = '#ffffff';
+				colorItem.innerHTML = key;
+                colorItem.style.width = "50%";
 
                 let tablerow = document.createElement('tr');
-				tablerow.appendChild(tdText);
-				tablerow.appendChild(tdColor);
+				tablerow.appendChild(colorItem);
 
 				legendtable.appendChild(tablerow);
             }
@@ -256,8 +252,6 @@
 
 			var geochart = new google.visualization.GeoChart(document.getElementById('maps_chart'));
 			geochart.draw(geodata, geooptions);
-			
-
 			
 			drawTreeMap();
 			
@@ -544,11 +538,12 @@
 				</div>
 			</th>
 		</tr>
-		<tr style="height:70%; width:100%">
-			<td style="width:70%;">
-				<div id="maps_chart"></div>
+		<tr style="height:90%; width:100%">
+			<td style="width:50%;">
+				<div id="maps_chart" style="height:65%"></div>
+				<div id="tree_chart" style="height:35%"></div>
 			</td>
-			<td style="width:30%;">
+			<td style="width:50%;">
 				<div id="piechart" style="height:50%; width:100%"></div>
 				<div id="legend" style="height:10%; width:100%;">
 					<table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -565,14 +560,7 @@
 				<div id="curve_chart" style="height:40%; width:100%"></div>
 			</td>
 		</tr>
-		<tr style="height:20%; width:100%; display: table-row">
-			<td colspan="2">
-				<div id="tree_chart"></div>
-			</td>
-		</tr>
 	</table>
-
-
 </body>
 
 </html>
