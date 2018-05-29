@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body, html {
+    width:100%;
+    height:100%;
+    padding: 0;
+    margin: 0;
+    font-size: 12pt;
+    font-family: 'Open Sans', sans-serif;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+input, select, option {
+    border:solid 1px #ccc;
+    padding:5px 8px;
+    font-size: 12pt;
+    font-family: 'Open Sans', sans-serif;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+
+.first_row {
+    height: 80px;
+}
+
+.controls {
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.legendContainer {
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 150px;
+}
+
+.legendContainer .label {
+    width: 50%;
+    display: inline-block;
+    padding: 3px 0;
+}
+.legendContainer .label .color {
+    width: 10px;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 14pt;
+    background: #eee;
+    padding:5px;
+    font-weight: 400;
+}
+
+#charts td, #charts tr {
+    vertical-align: top;
+}
+
+.todo {
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+}
+
+.chartContainer {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.chartContainer > h2 {
+    display: table-row;
+    height: 0;
+}
+.chartContainer > div {
+    display: table-row;
+    height: auto;
+}
+
+/* autocomplete */
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.autocomplete input {
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding:5px 8px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}

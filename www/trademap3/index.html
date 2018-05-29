@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.3/dist/loadingoverlay.min.js"></script>
+        <script src="autocomplete.js"></script>
+
+        <!-- chart apis -->
+        <!---------------->
+
+        
+        <script src="client.js"></script>
+        <script src="charts.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body>
+        <table>
+            <tr class="first_row">
+                <td>
+                    <div class="controls">
+                        <label>Country: <div class="autocomplete" style="width:300px;">
+                            <input type="text" name="Country" id="Country">
+                        </div>
+                        </label>
+                        <label>Year: <select name="Years" id="Years"></select></label>
+                        <label>Product Category: <select name="ProductCategory" id="ProductCategory"></select></label>
+                        <label>Dimension: <select name="Dimension" id="Dimension">
+                            <option value="totals">Totals</option>
+                            <option value="imports">Imports</option>
+                            <option value="exports">Exports</option>
+                        </select></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="charts">
+
+                    <table>
+                        <tr>
+                            <td>
+
+                                <table>
+                                    <tr style="height: auto"><td>
+                                        <div class="chartContainer">
+                                            <h2 style="margin-top: 0">Trade Deficits/Surpluses</h2>
+                                            <div id="geoChart"></div>
+                                        </div>
+                                    </td></tr>
+                                    <tr style="height: 200px"><td>
+                                        <div class="chartContainer">
+                                            <h2 style="margin-top: 0">Absolute Trade Amounts</h2>
+                                            <div id="treeMapChart"></div>
+                                        </div>
+                                    </td></tr>
+                                </table>
+
+                            </td>
+                            <td style="width: 500px">
+
+                                <table>
+                                    <tr style="height: auto"><td>
+                                        <div class="chartContainer">
+                                            <h2 style="margin-top: 0">Category Share (Current Year)</h2>
+                                            <div id="pieChart"></div>
+                                        </div>
+                                    </td></tr>
+                                    <tr style="height: auto"><td>
+                                        <div class="chartContainer">
+                                            <h2>Category Share over time</h2>
+                                            <div id="lineChart"></div>
+                                        </div>
+                                    </td></tr>
+                                    <tr style="height: 0"><td>
+                                        <div class="chartContainer">
+                                            <h2>Legend</h2>
+                                            <div id="legend"></div>
+                                        </div>
+                                    </td></tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
