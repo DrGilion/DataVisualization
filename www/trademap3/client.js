@@ -95,7 +95,7 @@ function country_selected(cc) {
     var last_index = countries[cc]["years"][default_category].length - 1;
     var latest_year = countries[cc]["years"][default_category][last_index];
     $("#Dimension").val(default_dimension);
-    _selection_update(cc, latest_year, default_category);
+    _selection_update(cc, latest_year, default_category, default_dimension);
 }
 
 function init_autocomplete() {

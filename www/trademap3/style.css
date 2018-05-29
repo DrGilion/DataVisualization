@@ -38,15 +38,18 @@ label {
 }
 
 .legendContainer {
+    /*
     overflow: scroll;
     overflow-x: hidden;
     max-height: 150px;
+    */
 }
 
 .legendContainer .label {
     width: 50%;
     display: inline-block;
-    padding: 3px 0;
+    padding: 5px 0;
+    float: left;
 }
 .legendContainer .label .color {
     width: 10px;
@@ -82,6 +85,10 @@ h2 {
 .chartContainer > div {
     display: table-row;
     height: auto;
+}
+
+#lineChart canvas {
+    margin-top:10px;
 }
 
 /* autocomplete */

@@ -28,6 +28,19 @@ var resourceColorTable = {
     '64-67_Footwear':'#990033',
     '72-83_Metals':'#6699cc'
 };
+var usedLabels;
+
+function getFirstItemsByVal(dict, num) {
+    var items = Object.keys(dict).map(function(key) {
+        return [key, dict[key]];
+    });
+
+    items.sort(function(first, second) {
+        return second[1] - first[1];
+    });
+
+    return items.slice(0, num);
+}
 
 function drawPieChart() {
     var area = $("#pieChart");
@@ -35,8 +48,129 @@ function drawPieChart() {
 }
 
 function drawLineChart() {
+    // generate data
+    var selectedCategories = {};
+    function addToCategories(arr) {
+        $.each(arr, function(key, value) {
+            // ignore default category
+            if (value["id"] === default_category) {
+                return;
+            }
+
+            if(!(value["id"] in selectedCategories)) {
+                selectedCategories[value["id"]] = 0;
+            }
+
+            selectedCategories[value["id"]] += value["percent"];
+        });
+    }
+
+    var years = [];
+    $.each(current_aggregates["years"], function(key, value) {
+       if(current_dimension === "exports" || current_dimension === "totals") {
+           addToCategories(value["exports"]);
+       }
+
+        if(current_dimension === "imports" || current_dimension === "totals") {
+            addToCategories(value["imports"]);
+        }
+
+        years.push(value["year"]);
+    });
+    years.sort();
+
+
+    var config = {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: []
+        },
+        options: {
+            responsive: true,
+            legend: {
+                display: false,
+            },
+            title: {
+                display: false
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Year'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Percent'
+                    }
+                }]
+            }
+        }
+    };
+
+    var displayCategories = getFirstItemsByVal(selectedCategories, 8);
+    $.each(displayCategories, function(key, value) {
+        var catId = value[0];
+        usedLabels.add(catId);
+
+        var dataset = {
+            label: categories[catId],
+            backgroundColor: resourceColorTable[catId],
+            borderColor: resourceColorTable[catId],
+            data: [
+            ],
+            fill: false,
+        };
+        for(var year of years) {
+            var dat = current_aggregates["years"].find(x => x["year"] === year);
+            var percent = 0;
+
+            var added = 0;
+            if(current_dimension === "exports" || current_dimension === "totals") {
+                var obj = dat["exports"].find(x => x["id"] === catId);
+                if(typeof obj !== 'undefined') {
+                    percent += obj["percent"];
+                    added += 1;
+                }
+            }
+
+            if(current_dimension === "imports" || current_dimension === "totals") {
+                var obj = dat["imports"].find(x => x["id"] === catId);
+                if(typeof obj !== 'undefined') {
+                    percent += obj["percent"];
+                    added += 1;
+                }
+            }
+
+            percent = percent/added;
+            percent = Math.round(percent, 2);
+
+            dataset.data.push(percent);
+        }
+        config.data.datasets.push(dataset);
+    });
+
     var area = $("#lineChart");
-    area.html("<div class='todo'>TODO!</div>");
+    area.empty();
+
+    var canvas = $("<canvas>");
+    area.append(canvas);
+
+    var ctx = canvas[0].getContext('2d');
+    window.myLine = new Chart(ctx, config);
 }
 
 function drawGeoChart() {
@@ -56,20 +190,33 @@ function drawLegend() {
     var legendContainer = $("<div>");
     legendContainer.addClass("legendContainer");
 
+    /*
     $.each(resourceColorTable, function(key, color) {
         var category = categories[key];
         legendContainer.append("<div class='label'><div class='color' style='background: "+color+"'>&nbsp;</div> "+category+"</div>");
     });
+    */
+
+    // Nur die Labels, die wir auch anzeigen!
+    for(var lbl of usedLabels.entries()) {
+        var catId = lbl[0];
+        var category = categories[catId];
+        var color = resourceColorTable[catId];
+        legendContainer.append("<div class='label'><div class='color' style='background: "+color+"'>&nbsp;</div> "+category+"</div>");
+    }
 
     legend.append(legendContainer);
 }
 
 
 $(document).on("draw_charts", function () {
-    drawLegend();
+    usedLabels = new Set();
+
+
     drawPieChart();
     drawLineChart();
     drawGeoChart();
     drawTreeMapChart();
+    drawLegend();
     $(document).trigger("charts_drawn");
 });
