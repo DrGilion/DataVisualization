@@ -42,37 +42,101 @@ function getFirstItemsByVal(dict, num) {
     return items.slice(0, num);
 }
 
+function addToCategories(catArr, arr) {
+    $.each(arr, function(key, value) {
+        // ignore default category
+        if (value["id"] === default_category) {
+            return;
+        }
+
+        if(!(value["id"] in catArr)) {
+            catArr[value["id"]] = 0;
+        }
+
+        catArr[value["id"]] += value["percent"];
+    });
+}
+
 function drawPieChart() {
+    // generate data
+    var relObj = current_aggregates["years"].find(x => x["year"] === current_year);
+
+    var allCategories = {};
+    if(current_dimension === "exports" || current_dimension === "totals") {
+        addToCategories(allCategories, relObj["exports"]);
+    }
+
+    if(current_dimension === "imports" || current_dimension === "totals") {
+        addToCategories(allCategories, relObj["imports"]);
+    }
+
+    var config = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                ],
+                backgroundColor: [
+                ],
+                label: 'Dataset'
+            }],
+            labels: [
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                display: false,
+            },
+        }
+    };
+
+    var total_percent = 0;
+    var displayCategories = getFirstItemsByVal(allCategories, 8);
+    $.each(displayCategories, function(key, value) {
+        var catId = value[0];
+        var percent = value[1];
+        if(current_dimension === "totals") {
+            percent = percent * 0.5;
+            percent = Math.round(percent, 2);
+        }
+        total_percent += percent;
+
+        usedLabels.add(catId);
+
+        config.data.datasets[0].data.push(percent);
+        config.data.datasets[0].backgroundColor.push(resourceColorTable[catId]);
+        config.data.labels.push(categories[catId]);
+    });
+
+    // add others
+    config.data.datasets[0].data.push((100-total_percent));
+    config.data.datasets[0].backgroundColor.push(resourceColorTable["others"]);
+    config.data.labels.push(categories["others"]);
+    usedLabels.add("others");
+
     var area = $("#pieChart");
-    area.html("<div class='todo'>TODO!</div>");
+    area.empty();
+
+    var canvas = $("<canvas>");
+    area.append(canvas);
+
+    var ctx = canvas[0].getContext('2d');
+    window.myPie = new Chart(ctx, config);
 }
 
 function drawLineChart() {
     // generate data
-    var selectedCategories = {};
-    function addToCategories(arr) {
-        $.each(arr, function(key, value) {
-            // ignore default category
-            if (value["id"] === default_category) {
-                return;
-            }
-
-            if(!(value["id"] in selectedCategories)) {
-                selectedCategories[value["id"]] = 0;
-            }
-
-            selectedCategories[value["id"]] += value["percent"];
-        });
-    }
+    var allCategories = {};
 
     var years = [];
     $.each(current_aggregates["years"], function(key, value) {
        if(current_dimension === "exports" || current_dimension === "totals") {
-           addToCategories(value["exports"]);
+           addToCategories(allCategories, value["exports"]);
        }
 
         if(current_dimension === "imports" || current_dimension === "totals") {
-            addToCategories(value["imports"]);
+            addToCategories(allCategories, value["imports"]);
         }
 
         years.push(value["year"]);
@@ -121,7 +185,7 @@ function drawLineChart() {
         }
     };
 
-    var displayCategories = getFirstItemsByVal(selectedCategories, 8);
+    var displayCategories = getFirstItemsByVal(allCategories, 8);
     $.each(displayCategories, function(key, value) {
         var catId = value[0];
         usedLabels.add(catId);
@@ -219,4 +283,10 @@ $(document).on("draw_charts", function () {
     drawTreeMapChart();
     drawLegend();
     $(document).trigger("charts_drawn");
+});
+
+$(document).on("initialized", function() {
+    // monkeypatch
+    categories["others"] = "Others";
+    resourceColorTable["others"] = "#cccccc";
 });

@@ -191,6 +191,7 @@ function init() {
         });
 
         $.LoadingOverlay("hide");
+        $( document ).trigger("initialized");
     });
 }
 
