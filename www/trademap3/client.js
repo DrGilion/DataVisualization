@@ -102,7 +102,9 @@ function init_autocomplete() {
     var country_list = [];
 
     $.each(countries, function(key, value) {
-        country_list.push(value["full_name"]);
+        if(Object.keys(value["years"]).length > 0) {
+            country_list.push(value["full_name"]);
+        }
     });
 
     autocomplete(document.getElementById("Country"), country_list, function(selection) {
