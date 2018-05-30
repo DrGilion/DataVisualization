@@ -246,7 +246,44 @@ function drawGeoChart() {
 
 function drawTreeMapChart() {
     var area = $("#treeMapChart");
-    area.html("<div class='todo'>TODO!</div>");
+    area.empty();
+
+
+    var chart = {
+        chart: {
+            margin:  [0,0,0,0]
+        },
+        series: [{
+            type: "treemap",
+            layoutAlgorithm: 'squarified',
+            data: []
+        }],
+        title: {
+            text: null
+        }
+    };
+
+    var cData = {};
+    $.each(current_data, function(key, value) {
+        if(current_dimension === key || current_dimension === "totals") {
+            $.each(value, function (key, value) {
+                if(!(value["cc"] in cData)) {
+                    cData[value["cc"]] = 0;
+                }
+
+                cData[value["cc"]] += value["amount"];
+            });
+        }
+    });
+
+    for (cc in cData) {
+        chart.series[0].data.push({
+            name: countries[cc]["full_name"],
+            value: cData[cc]
+        });
+    }
+
+    Highcharts.chart('treeMapChart', chart);
 }
 
 function drawLegend() {
@@ -284,6 +321,7 @@ $(document).on("draw_charts", function () {
     drawGeoChart();
     drawTreeMapChart();
     drawLegend();
+
     $(document).trigger("charts_drawn");
 });
 
