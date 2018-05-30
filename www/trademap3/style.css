@@ -14,6 +14,11 @@ table {
     height: 100%;
 }
 
+table * {
+    border: none;
+    border-spacing: 0px;
+}
+
 input, select, option {
     border:solid 1px #ccc;
     padding:5px 8px;
