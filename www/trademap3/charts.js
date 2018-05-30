@@ -219,12 +219,15 @@ function drawLineChart() {
                 }
             }
 
-            percent = percent/added;
-            percent = Math.round(percent, 2);
+            if(percent > 0) {
+                percent = percent/added;
+                percent = Math.round(percent, 2);
+            }
 
             dataset.data.push(percent);
         }
         config.data.datasets.push(dataset);
+        debugger;
     });
 
     var area = $("#lineChart");
