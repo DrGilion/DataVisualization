@@ -336,6 +336,15 @@ function drawTreeMapChart() {
     }
 
     Highcharts.chart('treeMapChart', chart);
+
+    var title = $("#treeMapTitle");
+
+    if(current_dimension === "totals")
+        title.text("Absolute Trade Amounts");
+    if(current_dimension === "exports")
+        title.text("Largest Export Partners");
+    if(current_dimension === "imports")
+        title.text("Largest Import Partners");
 }
 
 function drawLegend() {
