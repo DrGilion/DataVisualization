@@ -241,7 +241,59 @@ function drawLineChart() {
 
 function drawGeoChart() {
     var area = $("#geoChart");
-    area.html("<div class='todo'>TODO!</div>");
+    area.empty();
+
+    Highcharts.mapChart('geoChart', {
+        title: {
+            text: null
+        },
+        chart: {
+            borderWidth: 1,
+            map: 'custom/world'
+        },
+        colorAxis: {
+            min: 0,
+            stops: [
+                [0, '#EFEFFF'],
+                [0.5, Highcharts.getOptions().colors[0]],
+                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).brighten(-0.5).get()]
+            ]
+        },
+        mapNavigation: {
+            enabled: true
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'bottom'
+        },
+        series: [{
+            data: [
+                {
+                    "hc-key": "de",
+                    "value": 42
+                },
+                {
+                    "hc-key": "ug",
+                    "value": 42
+                }
+            ],
+            name: 'Trading volume',
+            states: {
+                hover: {
+                    color: Highcharts.getOptions().colors[2]
+                }
+            },
+            joinBy: 'hc-key',
+            dataLabels: {
+                enabled: false
+            },
+            tooltip: {
+                pointFormat: '{point.name}: {point.value}'
+              }
+        }]
+     });
+
 }
 
 function drawTreeMapChart() {
