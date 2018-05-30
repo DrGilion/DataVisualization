@@ -1,16 +1,26 @@
-import json, collections, csv
+import json, collections, csv, os
 
 class Slicer:
     def __init__(self, dump_file, output_dir='data/'):
         self.dump_file = dump_file
         self.output_dir = output_dir
 
+
         self.data = None
 
     def init(self):
         if not self.data:
+            if not os.path.exists(self.output_dir):
+                os.makedirs(self.output_dir)
+
             with open(self.dump_file, 'r') as f:
                 self.data = json.load(f)
+
+    def get_valid_categories(self):
+        with open('ressources/valid_categories') as f:
+            content = f.read().splitlines()
+
+        return [cat.strip().lower() for cat in content]
 
     def get_ccs(self):
         with open('ressources/cc.txt') as f:
@@ -37,10 +47,13 @@ class Slicer:
     def gen_cats_file(self):
         cats = {}
 
+        valid_categories = self.get_valid_categories()
+
         with open('ressources/products.csv') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                cats[row['ProductGroup']] = row['ProductGroupDescription'].strip()
+                if row['ProductGroup'].lower() in valid_categories:
+                    cats[row['ProductGroup']] = row['ProductGroupDescription'].strip()
 
         self.set_json_file("categories", cats)
 
@@ -117,6 +130,8 @@ class Slicer:
     def slice_country_aggregates(self):
         self.init()
 
+        valid_categories = self.get_valid_categories()
+
         for c in self.data:
             years = collections.defaultdict(lambda: {"import": {}, "export": {}})
 
@@ -125,7 +140,10 @@ class Slicer:
                 y_products = collections.defaultdict(lambda : {})
 
                 for product in c["data"][type].keys():
-                    if product.lower() == "total":
+                    #if product.lower() == "total":
+                    #    continue
+
+                    if product.lower() not in valid_categories:
                         continue
 
                     for year in c["data"][type][product].keys():
