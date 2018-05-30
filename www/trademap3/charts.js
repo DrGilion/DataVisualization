@@ -227,7 +227,6 @@ function drawLineChart() {
             dataset.data.push(percent);
         }
         config.data.datasets.push(dataset);
-        debugger;
     });
 
     var area = $("#lineChart");
