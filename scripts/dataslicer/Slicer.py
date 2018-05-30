@@ -69,13 +69,13 @@ class Slicer:
             all_products = set(c["data"]["import"].keys())
             all_products.update(c["data"]["export"].keys())
 
-            if len(all_products) == 0:
-                continue
-
             result[cc] = {
                 "full_name": ccs[cc],
                 "years":{}
             }
+
+            if len(all_products) == 0:
+                continue
 
             for product in all_products:
                 imports = c["data"]["import"].get(product, {})
@@ -90,6 +90,8 @@ class Slicer:
 
     def slice_country_products_partners(self):
         self.init()
+
+        valid_ccs = self.get_ccs().keys()
 
         for c in self.data:
             cc = c["cc"]
@@ -118,10 +120,12 @@ class Slicer:
                         "imports": [
                             {"cc":cc, "amount":y_imports[cc]}
                             for cc in y_imports.keys()
+                            if cc in valid_ccs
                         ],
                         "exports": [
                             {"cc": cc, "amount": y_exports[cc]}
                             for cc in y_exports.keys()
+                            if cc in valid_ccs
                         ]
                     }
 
