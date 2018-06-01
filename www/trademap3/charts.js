@@ -254,9 +254,9 @@ function drawGeoChart() {
         colorAxis: {
             min: 0,
             stops: [
-                [0, '#EFEFFF'],
-                [0.5, Highcharts.getOptions().colors[0]],
-                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).brighten(-0.5).get()]
+                [0, '#FF0000'],
+                [0.5, '#EEEEEE'],
+                [1, '#00FF00']
             ]
         },
         mapNavigation: {

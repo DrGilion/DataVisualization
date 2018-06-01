@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5305240e-bf93-4840-b0c3-0018796c35c5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/trademap2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/trademap2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/trademap3/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/trademap3/charts.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,14 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/trademap2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="522" column="35" lean-forward="true" selection-start-line="522" selection-start-column="35" selection-end-line="522" selection-end-column="35" />
+            <state relative-caret-position="-1740">
+              <caret line="246" selection-start-line="246" selection-end-line="246" />
               <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="charts.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/trademap3/charts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="257" column="33" lean-forward="true" selection-start-line="257" selection-start-column="33" selection-end-line="257" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#59#65#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,6 +65,7 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/trademap2/index.html" />
+        <option value="$PROJECT_DIR$/www/trademap3/charts.js" />
       </list>
     </option>
   </component>
@@ -74,7 +90,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,1268 +106,18 @@
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="trademap2" type="462c0819:PsiDirectoryNode" />
+              <item name="trademap3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/threaded_fetcher/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/threaded_fetcher/ImportWorker.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/threaded_fetcher/__pycache__/ImportWorker.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/threaded_fetcher/run.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/trademap2/index.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/.idea/dataslicer.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/Slicer.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/__pycache__/Slicer.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/ressources/cc.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/ressources/products.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/ressources/products.xlsx</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/run.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/activate</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/activate.csh</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/activate.fish</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/easy_install</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/easy_install-3.5</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/pip</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/pip3</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/pip3.5</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/python</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/bin/python3</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/easy-install.pth</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/EGG-INFO/PKG-INFO</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/EGG-INFO/SOURCES.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/EGG-INFO/dependency_links.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/EGG-INFO/entry_points.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/EGG-INFO/not-zip-safe</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/EGG-INFO/requires.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/EGG-INFO/top_level.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/__main__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/appdirs.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/_cmd.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/adapter.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/cache.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/caches/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/caches/file_cache.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/caches/redis_cache.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/compat.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/controller.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/filewrapper.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/heuristics.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/serialize.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/cachecontrol/wrapper.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/certifi/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/certifi/__main__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/certifi/cacert.pem</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/certifi/core.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/big5freq.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/big5prober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/chardistribution.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/charsetgroupprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/charsetprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/cli/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/cli/chardetect.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/codingstatemachine.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/compat.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/cp949prober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/enums.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/escprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/escsm.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/eucjpprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/euckrfreq.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/euckrprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/euctwfreq.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/euctwprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/gb2312freq.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/gb2312prober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/hebrewprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/jisfreq.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/jpcntx.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/langbulgarianmodel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/langcyrillicmodel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/langgreekmodel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/langhebrewmodel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/langhungarianmodel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/langthaimodel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/langturkishmodel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/latin1prober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/mbcharsetprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/mbcsgroupprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/mbcssm.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/sbcharsetprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/sbcsgroupprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/sjisprober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/universaldetector.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/utf8prober.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/chardet/version.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/colorama/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/colorama/ansi.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/colorama/ansitowin32.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/colorama/initialise.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/colorama/win32.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/colorama/winterm.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/_backport/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/_backport/misc.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/_backport/shutil.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.cfg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/_backport/tarfile.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/compat.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/database.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/index.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/locators.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/manifest.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/markers.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/metadata.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/resources.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/scripts.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/t32.exe</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/t64.exe</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/util.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/version.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/w32.exe</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/w64.exe</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distlib/wheel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/distro.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/_ihatexml.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/_inputstream.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/_tokenizer.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/_trie/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/_trie/_base.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/_trie/datrie.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/_trie/py.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/_utils.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/constants.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/filters/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/filters/alphabeticalattributes.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/filters/base.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/filters/inject_meta_charset.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/filters/lint.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/filters/optionaltags.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/filters/sanitizer.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/filters/whitespace.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/html5parser.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/serializer.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treeadapters/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treeadapters/genshi.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treeadapters/sax.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treebuilders/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treebuilders/base.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treebuilders/dom.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree_lxml.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treewalkers/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treewalkers/base.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treewalkers/dom.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treewalkers/etree.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treewalkers/etree_lxml.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/html5lib/treewalkers/genshi.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/idna/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/idna/codec.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/idna/compat.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/idna/core.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/idna/idnadata.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/idna/intranges.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/idna/package_data.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/idna/uts46data.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/ipaddress.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/lockfile/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/lockfile/linklockfile.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/lockfile/mkdirlockfile.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/lockfile/pidlockfile.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/lockfile/sqlitelockfile.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/lockfile/symlinklockfile.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/ordereddict.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/__about__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/_compat.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/_structures.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/markers.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/requirements.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/specifiers.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/utils.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/packaging/version.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/pkg_resources/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/progress/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/progress/bar.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/progress/counter.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/progress/helpers.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/progress/spinner.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/pyparsing.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/re-vendor.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/__version__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/_internal_utils.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/adapters.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/api.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/auth.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/cacert.pem</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/certs.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/compat.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/cookies.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/exceptions.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/help.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/hooks.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/models.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/packages.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/sessions.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/status_codes.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/structures.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/requests/utils.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/retrying.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/six.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/_collections.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/connection.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/connectionpool.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/_securetransport/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/_securetransport/bindings.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/_securetransport/low_level.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/appengine.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/ntlmpool.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/pyopenssl.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/securetransport.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/contrib/socks.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/exceptions.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/fields.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/filepost.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/packages/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/packages/backports/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/packages/backports/makefile.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/packages/ordered_dict.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/packages/six.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/packages/ssl_match_hostname/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/packages/ssl_match_hostname/_implementation.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/poolmanager.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/request.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/response.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/connection.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/request.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/response.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/retry.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/selectors.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/ssl_.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/timeout.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/url.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/urllib3/util/wait.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/webencodings/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/webencodings/labels.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/webencodings/mklabels.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/webencodings/tests.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/_vendor/webencodings/x_user_defined.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/basecommand.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/baseparser.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/cmdoptions.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/check.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/completion.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/download.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/freeze.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/hash.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/help.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/install.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/list.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/search.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/show.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/uninstall.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/commands/wheel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/compat/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/compat/dictconfig.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/download.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/exceptions.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/index.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/locations.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/models/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/models/index.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/operations/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/operations/check.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/operations/freeze.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/pep425tags.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/req/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/req/req_file.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/req/req_install.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/req/req_set.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/req/req_uninstall.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/status_codes.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/appdirs.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/build.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/deprecation.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/encoding.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/filesystem.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/glibc.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/hashes.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/logging.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/outdated.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/packaging.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/setuptools_build.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/utils/ui.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/vcs/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/vcs/bazaar.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/vcs/git.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/vcs/mercurial.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/vcs/subversion.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/pip-9.0.3-py3.5.egg/pip/wheel.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/setuptools-39.0.1-py3.5.egg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib/python3.5/site-packages/setuptools.pth</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/lib64</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/dataslicer/venv/pyvenv.cfg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/trademap2/util.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/trademap2/wnumb-1.1.0/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/trademap2/wnumb-1.1.0/bower.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/trademap2/wnumb-1.1.0/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/trademap2/wnumb-1.1.0/test.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/trademap2/wnumb-1.1.0/wNumb.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/.vscode/.ropeproject/config.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/.vscode/settings.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/__pycache__/console.cpython-34.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/cc.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/console.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_abw.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_afg.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ago.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_aia.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ala.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_alb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_and.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ant.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_are.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_arg.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_arm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_asm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ata.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_atf.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_atg.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_aus.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_aut.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_aze.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bdi.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bel.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ben.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bfa.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bgd.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bgr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bhr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bhs.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bih.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_blm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_blr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_blz.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bmu.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bol.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bra.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_brb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_brn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_btn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bvt.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_bwa.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_caf.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_can.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cck.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_che.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_chl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_chn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_civ.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cmr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cod.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cog.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cok.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_col.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_com.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cpv.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cri.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cub.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cxr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cym.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cyp.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_cze.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_deu.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_dji.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_dma.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_dnk.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_dom.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_dza.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ecu.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_egy.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_eri.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_esh.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_esp.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_est.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_eth.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_fin.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_fji.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_flk.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_fra.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_fro.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_fsm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gab.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gbr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_geo.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ggy.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gha.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gib.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gin.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_glp.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gmb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gnb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gnq.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_grc.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_grd.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_grl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gtm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_guf.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_gum.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_guy.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_hkg.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_hmd.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_hnd.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_hrv.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_hti.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_hun.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_idn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_imn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ind.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_iot.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_irl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_irn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_irq.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_isl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_isr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ita.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_jam.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_jey.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_jor.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_jpn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_kaz.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ken.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_kgz.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_khm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_kir.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_kna.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_kor.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_kwt.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lao.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lbn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lbr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lby.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lca.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lie.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lka.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lso.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ltu.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lux.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_lva.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mac.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_maf.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mar.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mco.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mda.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mdg.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mdv.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mex.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mhl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mkd.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mli.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mlt.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mmr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mne.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mng.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mnp.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_moz.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mrt.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_msr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mtq.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mus.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mwi.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_mys.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_myt.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_nam.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ncl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ner.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_nfk.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_nga.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_nic.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_niu.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_nld.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_nor.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_npl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_nru.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_nzl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_omn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_pak.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_pan.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_pcn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_per.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_phl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_plw.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_png.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_pol.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_pri.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_prk.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_prt.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_pry.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_pse.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_pyf.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_qat.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_reu.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_rou.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_rus.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_rwa.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_sau.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_sdn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_sen.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_sgp.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_sgs.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_shn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_sjm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_slb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_sle.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_slv.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_smr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_som.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_spm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_srb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_stp.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_sur.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_svk.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_svn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_swe.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_swz.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_syc.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_syr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tca.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tcd.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tgo.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tha.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tjk.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tkl.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tkm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tls.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ton.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tto.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tun.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tur.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tuv.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_twn.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_tza.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_uga.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ukr.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_umi.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ury.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_usa.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_uzb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_vat.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_vct.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_ven.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_vgb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_vir.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_vnm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_vut.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_wlf.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_wsm.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_yem.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_zaf.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_zmb.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/aggregate_zwe.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/data/cc_list.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/__init__.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/__pycache__/__init__.cpython-34.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/__pycache__/urlfetch.cpython-34.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/__pycache__/__init__.cpython-34.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/__version__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/_internal_utils.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/adapters.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/api.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/auth.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/certs.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/compat.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/cookies.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/exceptions.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/help.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/hooks.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/models.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/packages.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/sessions.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/status_codes.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/structures.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/requests/utils.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/urlfetch.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/urlfetch.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/ext/urlfetch.useragents.list</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/datafetcher/fetch.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/.Rhistory</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/aggregate.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/cc.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/data.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/dl.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/dl_import.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/country-capitals.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ABW.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.AFG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.AGO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.AIA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ALA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ALB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.AND.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ANT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ARE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ARG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ARM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ASM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ATA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ATF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ATG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.AUS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.AUT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.AZE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BDI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BEL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BEN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BFA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BGD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BGR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BHR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BHS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BIH.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BLM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BLR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BLZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BMU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BOL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BRA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BRB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BRN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BTN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BVT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.BWA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CAF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CAN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CCK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CHE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CHL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CHN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CIV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CMR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.COD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.COG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.COK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.COL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.COM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CPV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CRI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CUB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CXR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CYM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CYP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.CZE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.DEU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.DJI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.DMA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.DNK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.DOM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.DZA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ECU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.EGY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ERI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ESH.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ESP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.EST.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ETH.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.FIN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.FJI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.FLK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.FRA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.FRO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.FSM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GAB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GBR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GEO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GGY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GHA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GIB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GIN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GLP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GMB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GNB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GNQ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GRC.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GRD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GRL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GTM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GUF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GUM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.GUY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.HKG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.HMD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.HND.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.HRV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.HTI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.HUN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.IDN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.IMN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.IND.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.IOT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.IRL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.IRN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.IRQ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ISL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ISR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ITA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.JAM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.JEY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.JOR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.JPN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.KAZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.KEN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.KGZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.KHM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.KIR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.KNA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.KOR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.KWT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LAO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LBN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LBR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LBY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LCA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LIE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LKA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LSO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LTU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LUX.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.LVA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MAC.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MAF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MAR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MCO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MDA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MDG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MDV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MEX.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MHL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MKD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MLI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MLT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MMR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MNE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MNG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MNP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MOZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MRT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MSR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MTQ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MUS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MWI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MYS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.MYT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NAM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NCL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NER.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NFK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NGA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NIC.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NIU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NLD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NOR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NPL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NRU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.NZL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.OMN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PAK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PAN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PCN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PER.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PHL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PLW.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PNG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.POL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PRI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PRK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PRT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PRY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PSE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.PYF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.QAT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.REU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ROU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.RUS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.RWA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SAU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SDN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SEN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SGP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SGS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SHN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SJM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SLB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SLE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SLV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SMR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SOM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SPM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SRB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.STP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SUR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SVK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SVN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SWE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SWZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SYC.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.SYR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TCA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TCD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TGO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.THA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TJK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TKL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TKM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TLS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TON.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TTO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TUN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TUR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TUV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TWN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.TZA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.UGA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.UKR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.UMI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.URY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.USA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.UZB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.VAT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.VCT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.VEN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.VGB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.VIR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.VNM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.VUT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.WLF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.WSM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.YEM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ZAF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ZMB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/export.ZWE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ABW.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.AFG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.AGO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.AIA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ALA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ALB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.AND.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ANT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ARE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ARG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ARM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ASM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ATA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ATF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ATG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.AUS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.AUT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.AZE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BDI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BEL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BEN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BFA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BGD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BGR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BHR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BHS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BIH.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BLM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BLR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BLZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BMU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BOL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BRA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BRB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BRN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BTN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BVT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.BWA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CAF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CAN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CCK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CHE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CHL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CHN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CIV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CMR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.COD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.COG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.COK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.COL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.COM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CPV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CRI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CUB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CXR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CYM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CYP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.CZE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.DEU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.DJI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.DMA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.DNK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.DOM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.DZA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ECU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.EGY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ERI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ESH.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ESP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.EST.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ETH.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.FIN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.FJI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.FLK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.FRA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.FRO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.FSM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GAB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GBR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GEO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GGY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GHA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GIB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GIN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GLP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GMB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GNB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GNQ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GRC.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GRD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GRL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GTM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GUF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GUM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.GUY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.HKG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.HMD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.HND.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.HRV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.HTI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.HUN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.IDN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.IMN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.IND.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.IOT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.IRL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.IRN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.IRQ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ISL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ISR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ITA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.JAM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.JEY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.JOR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.JPN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.KAZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.KEN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.KGZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.KHM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.KIR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.KNA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.KOR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.KWT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LAO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LBN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LBR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LBY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LCA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LIE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LKA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LSO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LTU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LUX.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.LVA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MAC.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MAF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MAR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MCO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MDA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MDG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MDV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MEX.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MHL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MKD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MLI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MLT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MMR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MNE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MNG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MNP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MOZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MRT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MSR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MTQ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MUS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MWI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MYS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.MYT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NAM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NCL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NER.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NFK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NGA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NIC.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NIU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NLD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NOR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NPL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NRU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.NZL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.OMN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PAK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PAN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PCN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PER.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PHL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PLW.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PNG.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.POL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PRI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PRK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PRT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PRY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PSE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.PYF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.QAT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.REU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ROU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.RUS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.RWA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SAU.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SDN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SEN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SGP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SGS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SHN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SJM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SLB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SLE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SLV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SMR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SOM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SPM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SRB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.STP.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SUR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SVK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SVN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SWE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SWZ.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SYC.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.SYR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TCA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TCD.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TGO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.THA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TJK.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TKL.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TKM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TLS.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TON.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TTO.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TUN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TUR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TUV.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TWN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.TZA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.UGA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.UKR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.UMI.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.URY.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.USA.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.UZB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.VAT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.VCT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.VEN.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.VGB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.VIR.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.VNM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.VUT.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.WLF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.WSM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.YEM.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ZAF.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ZMB.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/files/import.ZWE.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/metadata/cc_loc.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/metadata/cc_translate.csv</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/unicodecsv/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/unicodecsv/__init__.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/unicodecsv/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/unicodecsv/__pycache__/py3.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/unicodecsv/py2.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/unicodecsv/py2.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/unicodecsv/py3.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/unicodecsv/test.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__init__.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/biffh.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/book.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/compdoc.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/formatting.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/formula.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/info.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/sheet.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/timemachine.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/xldate.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/__pycache__/xlsx.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/biffh.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/biffh.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/book.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/book.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/compdoc.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/compdoc.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/examples/namesdemo.xls</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/examples/xlrdnameAPIdemo.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/formatting.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/formatting.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/formula.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/formula.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/info.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/info.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/sheet.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/sheet.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/timemachine.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/timemachine.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/xldate.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/xldate.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/xlsx.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/trade_data_generator/xlrd/xlsx.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/www/util.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1377,7 +142,8 @@
       <option name="presentableId" value="Default" />
       <updated>1527252838177</updated>
       <workItem from="1527252840238" duration="4407000" />
-      <workItem from="1527497469630" duration="6527000" />
+      <workItem from="1527497469630" duration="9145000" />
+      <workItem from="1527841710772" duration="510000" />
     </task>
     <task id="LOCAL-00001" summary="added dropdown menu">
       <created>1527257139003</created>
@@ -1386,14 +152,22 @@
       <option name="project" value="LOCAL" />
       <updated>1527257139003</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added legend">
+      <created>1527504056501</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527504056501</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10934000" />
+    <option name="totallyTimeSpent" value="14062000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1032" extended-state="6" />
+    <frame x="0" y="24" width="1920" height="1152" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1409,9 +183,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1422,16 +196,39 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added dropdown menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dropdown menu" />
+    <MESSAGE value="added legend" />
+    <option name="LAST_COMMIT_MESSAGE" value="added legend" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/trademap2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4245">
+          <caret line="283" column="29" selection-start-line="283" selection-start-column="29" selection-end-line="283" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/trademap2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6375">
           <caret line="425" column="34" lean-forward="true" selection-start-line="425" selection-start-column="34" selection-end-line="425" selection-end-column="34" />
           <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1452,11 +249,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/trademap2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="522" column="35" lean-forward="true" selection-start-line="522" selection-start-column="35" selection-end-line="522" selection-end-column="35" />
+        <state relative-caret-position="-1740">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
           <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/trademap3/charts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="257" column="33" lean-forward="true" selection-start-line="257" selection-start-column="33" selection-end-line="257" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#59#65#1" expanded="true" />
           </folding>
         </state>
       </provider>
