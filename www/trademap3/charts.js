@@ -338,6 +338,12 @@ function drawGeoChart() {
         });
     }
 
+
+    chartData.series[0].data.push({
+        "hc-key": current_cc,
+        "color":"blue"
+    });
+
     Highcharts.mapChart('geoChart', chartData);
 }
 
