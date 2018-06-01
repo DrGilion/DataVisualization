@@ -302,7 +302,14 @@ function drawGeoChart() {
                 enabled: false
             },
             tooltip: {
-                pointFormat: '<b><u>{point.name}:</u></b><br>Imports: ${point.imports}<br>Exports: ${point.exports}'
+                /*pointFormat: '<b><u>{point.name}:</u></b><br>Imports: ${point.imports}<br>Exports: ${point.exports}'*/
+                pointFormatter: function(){
+                    if(this.options.imports){
+                        return '<b><u>' + this.name + ':</u></b><br>Imports: $' + this.options.imports  + '<br>Exports: $' + this.options.exports;
+                    }else{
+                        return 'Current Country (' + this.name + ')';
+                    }
+                }
             }
         }]
     };
