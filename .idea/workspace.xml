@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5305240e-bf93-4840-b0c3-0018796c35c5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/www/trademap3/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/trademap3/charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/www/trademap3/charts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="512">
-              <caret line="176" column="33" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
+              <caret line="176" selection-start-line="176" selection-end-line="176" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#59#65#1" expanded="true" />
@@ -132,7 +132,7 @@
       <updated>1527252838177</updated>
       <workItem from="1527252840238" duration="4407000" />
       <workItem from="1527497469630" duration="9145000" />
-      <workItem from="1527841710772" duration="3939000" />
+      <workItem from="1527841710772" duration="4191000" />
     </task>
     <task id="LOCAL-00001" summary="added dropdown menu">
       <created>1527257139003</created>
@@ -148,15 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527504056501</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changed formatting">
+      <created>1527845900851</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527845900851</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17491000" />
+    <option name="totallyTimeSpent" value="17743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1152" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -186,7 +192,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added dropdown menu" />
     <MESSAGE value="added legend" />
-    <option name="LAST_COMMIT_MESSAGE" value="added legend" />
+    <MESSAGE value="changed formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed formatting" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/trademap2/index.html">
@@ -255,7 +262,7 @@
     <entry file="file://$PROJECT_DIR$/www/trademap3/charts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
-          <caret line="176" column="33" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#59#65#1" expanded="true" />
