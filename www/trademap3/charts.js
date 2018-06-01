@@ -280,6 +280,7 @@ function drawGeoChart() {
                 [1, '#00FF00']
             ]
         },
+
         mapNavigation: {
             enabled: true
         },
@@ -294,9 +295,12 @@ function drawGeoChart() {
             name: 'Trading volume',
             states: {
                 hover: {
-                    color: Highcharts.getOptions().colors[2]
+                    color: Highcharts.getOptions().colors[2],
+                    borderWidth: 1
                 }
             },
+            borderColor: 'black',
+            borderWidth: 0.2,
             joinBy: ['iso-a3','hc-key'],
             dataLabels: {
                 enabled: false
