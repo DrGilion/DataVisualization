@@ -294,7 +294,6 @@ function drawGeoChart() {
             name: 'Trading volume',
             states: {
                 hover: {
-                    color: Highcharts.getOptions().colors[2],
                     borderWidth: 1
                 }
             },
