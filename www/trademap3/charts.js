@@ -243,16 +243,16 @@ function drawGeoChart() {
     var area = $("#geoChart");
     area.empty();
 
-    Highcharts.mapChart('geoChart', {
+    var chartData = {
         title: {
             text: null
         },
         chart: {
-            borderWidth: 1,
+            borderWidth: 0,
             map: 'custom/world'
         },
         colorAxis: {
-            min: 0,
+            min: -100,
             stops: [
                 [0, '#FF0000'],
                 [0.5, '#EEEEEE'],
@@ -269,14 +269,6 @@ function drawGeoChart() {
         },
         series: [{
             data: [
-                {
-                    "hc-key": "de",
-                    "value": 42
-                },
-                {
-                    "hc-key": "ug",
-                    "value": 42
-                }
             ],
             name: 'Trading volume',
             states: {
@@ -284,16 +276,69 @@ function drawGeoChart() {
                     color: Highcharts.getOptions().colors[2]
                 }
             },
-            joinBy: 'hc-key',
+            joinBy: ['iso-a3','hc-key'],
             dataLabels: {
                 enabled: false
             },
             tooltip: {
-                pointFormat: '{point.name}: {point.value}'
-              }
+                pointFormat: '<b><u>{point.name}:</u></b><br>Imports: ${point.imports}<br>Exports: ${point.exports}'
+            }
         }]
-     });
+    };
 
+
+    var partner_ccs = new Set();
+    $.each(current_data, function(key, value) {
+        $.each(value, function(index, data) {
+            partner_ccs.add(data["cc"]);
+        });
+    });
+
+
+    for (var cc of partner_ccs){
+        var expSum = current_data["exports"].find(x => x["cc"] == cc);
+        var impSum = current_data["imports"].find(x => x["cc"] == cc);
+
+        var ratio = 0;
+
+        if(typeof expSum === 'undefined' && typeof impSum === 'undefined') {
+            continue;
+        } else if (typeof expSum === 'undefined') {
+            // nur importe
+            ratio = -100;
+        } else if (typeof impSum === 'undefined') {
+            // nur exporte
+            ratio = 100;
+        } else  {
+            expSum = expSum["amount"];
+            impSum = impSum["amount"];
+
+            var total = expSum+impSum;
+            if(expSum > impSum) {
+                ratio = (expSum/total)*100;
+            } else {
+                ratio = (impSum/total)*100*-1;
+            }
+        }
+
+        var _imports = 0;
+        var _exports = 0;
+        if(typeof impSum !== "undefined") {
+            _imports = Math.round(impSum, 2)*1000;
+        }
+        if(typeof expSum !== "undefined") {
+            _exports = Math.round(expSum, 2)*1000;
+        }
+
+        chartData.series[0].data.push({
+            "hc-key" : cc,
+            "value": ratio,
+            "imports": _imports,
+            "exports": _exports
+        });
+    }
+
+    Highcharts.mapChart('geoChart', chartData);
 }
 
 function drawTreeMapChart() {
