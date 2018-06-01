@@ -77,8 +77,7 @@ function drawPieChart() {
                 data: [
                 ],
                 backgroundColor: [
-                ],
-                label: 'Dataset'
+                ]
             }],
             labels: [
             ]
@@ -88,6 +87,19 @@ function drawPieChart() {
             legend: {
                 display: false,
             },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var label = data.labels[tooltipItem.index] || '';
+                        if (label) {
+                            label += ': ';
+                            label += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                            label += ' %';
+                        }
+                        return label;
+                    }
+                }
+            }
         }
     };
 
@@ -159,8 +171,17 @@ function drawLineChart() {
                 display: false
             },
             tooltips: {
-                mode: 'index',
-                intersect: false,
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                        if (label) {
+                            label += ': ';
+                            label += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                            label += ' %';
+                        }
+                        return label;
+                    }
+                }
             },
             hover: {
                 mode: 'nearest',
@@ -275,7 +296,7 @@ function drawGeoChart() {
                 },
                 {
                     "hc-key": "ug",
-                    "value": 42
+                    "value": 42000000
                 }
             ],
             name: 'Trading volume',
@@ -312,6 +333,11 @@ function drawTreeMapChart() {
         }],
         title: {
             text: null
+        },
+        tooltip: {
+            formatter: function(){
+                return '<strong>' + this.point.name + '</strong>: $ ' + Math.floor(this.point.value * 1000);
+            }
         }
     };
 
