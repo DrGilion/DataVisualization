@@ -26,11 +26,19 @@ function get_dimension() {
     return $("#Dimension").val();
 }
 
+/**
+ * Loads for the selected country the available years
+ * @returns {*} List of the years
+ */
 function get_current_years() {
     var years = countries[current_cc]["years"][current_category];
     return years;
 }
 
+/**
+ * Loads for the selected country and selected year the available economy categories
+ * @returns {Array} of the loading categories
+ */
 function get_current_categories() {
     var categories = new Set();
 
@@ -49,10 +57,29 @@ function get_current_categories() {
     return lCategories;
 }
 
+/**
+ * Execution after an JQuery updates triggered by the dropdowns
+ * wrapper function for the real update function
+ */
 function selection_update() {
     _selection_update(current_cc, $("#Years").val(), $("#ProductCategory").val(), $("#Dimension").val());
 }
 
+/**
+ *
+ * @param cc
+ * @param year
+ * @param category
+ * @param dimension
+ * @private
+ *
+ * First disables all inputs while execution to avoid conflicts
+ * Loads the required data from jsons in dependencies of country, year and categories
+ * Switch the current selection
+ * Update year and categories dropdowns
+ * Enables Inputs
+ * send request to redraw charts
+ */
 function _selection_update(cc, year, category, dimension) {
     disable_inputs();
 
@@ -76,7 +103,10 @@ function _selection_update(cc, year, category, dimension) {
         request_chart_redraw();
     });
 }
-
+/**
+ * Disables the input drop-downs and field for countries, years, categories and
+ * trade dimension
+ */
 function disable_inputs() {
     $("#Country").prop('disabled', true);
     $("#Years").prop('disabled', true);
@@ -84,6 +114,10 @@ function disable_inputs() {
     $("#Dimension").prop('disabled', true);
 }
 
+/**
+ * Enables the input drop-downs and field for countries, years, categories and
+ * trade dimension
+ */
 function enable_inputs() {
     $("#Country").prop('disabled', false);
     $("#Years").prop('disabled', false);
@@ -91,6 +125,10 @@ function enable_inputs() {
     $("#Dimension").prop('disabled', false);
 }
 
+/**
+ *
+ * @param cc
+ */
 function country_selected(cc) {
     var last_index = countries[cc]["years"][default_category].length - 1;
     var latest_year = countries[cc]["years"][default_category][last_index];
@@ -98,6 +136,10 @@ function country_selected(cc) {
     _selection_update(cc, latest_year, default_category, default_dimension);
 }
 
+/**
+ * Initial the country selection with auto-complete functionality
+ * For more information see autocomplete.js
+ */
 function init_autocomplete() {
     var country_list = [];
 
@@ -112,7 +154,10 @@ function init_autocomplete() {
         country_selected(cc);
     });
 }
-
+/**
+ * Initialize the years for initial and change selection state of the page
+ * Shown the available years in a drop down menu
+ */
 function init_years() {
     if (typeof(current_data) === 'undefined') {
         $("#Years").prop('disabled', true);
@@ -135,6 +180,10 @@ function init_years() {
     inp.val(current_year);
 }
 
+/**
+ * Initialize the categories for initial and change selection state of the page
+ * Shown the available economy categories in a drop down menu
+ */
 function init_categories() {
     if (typeof(current_data) === 'undefined') {
         $("#ProductCategory").prop('disabled', true);
@@ -157,12 +206,19 @@ function init_categories() {
     inp.val(current_category);
 }
 
+/**
+ *
+ * @param cb -> Function to execute at the end of this function
+ * LoadBaseData loads for the initial status countries and the categories for selection
+ * With alert when it's fail
+ * Safe in global variables
+ *
+ */
 
 function loadBaseData(cb) {
     $.when( $.getJSON( "/vis_data/countries.json" ), $.getJSON( "/vis_data/categories.json" ) ).done(function( _countries, _categories ) {
         if(_countries[2]["status"] !== 200 || _categories[2]["status"] !== 200) {
             alert("Failed to load base data!");
-            debugger;
         }
 
         country_to_cc = {};
@@ -175,6 +231,12 @@ function loadBaseData(cb) {
     });
 }
 
+/**
+ * init Function to initialize Data from Jsons ressources
+ * Define JQuery for change of the dropdown selection for years,categories and trade dimension
+ * triggered status initialized
+ * hides te LoadingOverlay
+ */
 function init() {
     $.LoadingOverlay("show");
     loadBaseData(function () {
@@ -197,6 +259,10 @@ function init() {
     });
 }
 
+/**
+ * JQuery, for detecting if the page ready for manipulation
+ * When the Page is ready call the init() function
+ */
 $( document ).ready(function() {
     init();
 });
