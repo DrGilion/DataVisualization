@@ -23,11 +23,15 @@
     }
   </style>
   <script>
+    /// utility function to clamp a value
     function clamp(num, min, max) {
       return num <= min ? min : num >= max ? max : num;
     }
   </script>
   <script>
+    /*
+    This application allows a user to populate a scatterplot with data points and cluster them with a k-Means algorithm. Partitioning up to 5 clusters possible.
+     */
     var rawData = [ [500,500] ];
     $(function () {
 
@@ -100,12 +104,14 @@
         }
       });
       $("#amount").val($("#cluster-slider").slider("value"));
-      $("#chart_div").click(function (event) {
+
+      //function to add a data point
+      $("#chart_div").click( function(event) {
         let result = [event.pageX,event.pageY];
         let drawArea = [];
         let startPoint = [];
 
-        //find measurements
+        //find measurements for the actual scatterplot
         let nodes = Array.from(document.getElementsByTagName("svg")[0].childNodes);
         for (let i = 0; i < nodes.length; i++) {
           let item = nodes[i];

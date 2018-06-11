@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5305240e-bf93-4840-b0c3-0018796c35c5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/trademap3/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/trademap3/charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/clustering/data/droughts.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/clustering/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/clustering/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/worldhappiness/d3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/worldhappiness/d3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/worldhappiness/data/2015.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/worldhappiness/data/2016.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/worldhappiness/data/2017.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/worldhappiness/index.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="charts.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="charts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/trademap3/charts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6780">
@@ -39,6 +45,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/clustering/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/trademap3/client.js">
           <provider selected="true" editor-type-id="text-editor" />
@@ -56,6 +80,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/trademap2/index.html" />
         <option value="$PROJECT_DIR$/www/trademap3/charts.js" />
+        <option value="$PROJECT_DIR$/www/clustering/index.html" />
       </list>
     </option>
   </component>
@@ -91,6 +116,12 @@
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="clustering" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
@@ -134,7 +165,7 @@
       <workItem from="1527252840238" duration="4407000" />
       <workItem from="1527497469630" duration="9145000" />
       <workItem from="1527841710772" duration="6002000" />
-      <workItem from="1528712046967" duration="2221000" />
+      <workItem from="1528712046967" duration="3494000" />
     </task>
     <task id="LOCAL-00001" summary="added dropdown menu">
       <created>1527257139003</created>
@@ -171,15 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527847541709</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="comments">
+      <created>1528714331488</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528714331488</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21775000" />
+    <option name="totallyTimeSpent" value="23048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1152" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -211,7 +248,8 @@
     <MESSAGE value="added legend" />
     <MESSAGE value="changed formatting" />
     <MESSAGE value="changed formatting 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed formatting 2" />
+    <MESSAGE value="comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/trademap3/charts.js">
@@ -275,13 +313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/trademap2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2355">
@@ -313,6 +344,25 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#59#65#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/clustering/clusters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/clustering/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
         </state>
       </provider>
     </entry>
