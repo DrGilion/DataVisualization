@@ -1,3 +1,4 @@
+//color coding for each resource type
 var resourceColorTable = {
     '84-85_MachElec':'#ccbb55',
     'manuf':'#66aa00',
@@ -57,6 +58,9 @@ function addToCategories(catArr, arr) {
     });
 }
 
+/**
+ * Draws a Pie Chart with the top 8 exported and imported goods for the selected country for a specific year, displayed in percentages.
+ */
 function drawPieChart() {
     // generate data
     var relObj = current_aggregates["years"].find(x => x["year"] === current_year);
@@ -90,7 +94,7 @@ function drawPieChart() {
             tooltips: {
                 callbacks: {
                     label: function(tooltipItem, data) {
-                        var label = data.labels[tooltipItem.index] || '';
+                        let label = data.labels[tooltipItem.index] || '';
                         if (label) {
                             label += ': ';
                             label += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
@@ -137,6 +141,9 @@ function drawPieChart() {
     window.myPie = new Chart(ctx, config);
 }
 
+/**
+ * draws a Line Chart with the top 8 exported and imported goods over the years, where data is available. Displayed in percentages.
+ */
 function drawLineChart() {
     // generate data
     var allCategories = {};
@@ -173,7 +180,7 @@ function drawLineChart() {
             tooltips: {
                 callbacks: {
                     label: function(tooltipItem, data) {
-                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                        let label = data.datasets[tooltipItem.datasetIndex].label || '';
                         if (label) {
                             label += ': ';
                             label += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
@@ -219,7 +226,7 @@ function drawLineChart() {
             ],
             fill: false,
         };
-        for(var year of years) {
+        for(let year of years) {
             var dat = current_aggregates["years"].find(x => x["year"] === year);
             var percent = 0;
 
@@ -260,6 +267,12 @@ function drawLineChart() {
     window.myLine = new Chart(ctx, config);
 }
 
+/**
+ * draws a color coded world map chart.
+ * The currently selected country is colored blue.
+ * red countries have a surplus of exports and a deficit of import in the context of the selected country. Imports > Exports
+ * green countries have a surplus of imports and a deficit of exports in the context of the selected country. Exports > Imports
+ */
 function drawGeoChart() {
     var area = $("#geoChart");
     area.empty();
@@ -304,7 +317,6 @@ function drawGeoChart() {
                 enabled: false
             },
             tooltip: {
-                /*pointFormat: '<b><u>{point.name}:</u></b><br>Imports: ${point.imports}<br>Exports: ${point.exports}'*/
                 pointFormatter: function(){
                     if(this.options.imports){
                         return '<b><u>' + this.name + ':</u></b><br>Imports: $' + this.options.imports  + '<br>Exports: $' + this.options.exports;
@@ -377,6 +389,9 @@ function drawGeoChart() {
     Highcharts.mapChart('geoChart', chartData);
 }
 
+/**
+ * draws a Tree Map displaying the total,export or import trade volume with other countries.
+ */
 function drawTreeMapChart() {
     var area = $("#treeMapChart");
     area.empty();
@@ -433,19 +448,16 @@ function drawTreeMapChart() {
         title.text("Largest Import Partners");
 }
 
+/**
+ * draws a legend with color codes for the current top 8 selected traded resources.
+ * These colors are used in the Pie and Line Chart.
+ */
 function drawLegend() {
     var legend = $("#legend");
     legend.empty();
 
     var legendContainer = $("<div>");
     legendContainer.addClass("legendContainer");
-
-    /*
-    $.each(resourceColorTable, function(key, color) {
-        var category = categories[key];
-        legendContainer.append("<div class='label'><div class='color' style='background: "+color+"'>&nbsp;</div> "+category+"</div>");
-    });
-    */
 
     // Nur die Labels, die wir auch anzeigen!
     for(var lbl of usedLabels.entries()) {
